@@ -1,5 +1,5 @@
 {
-  "name": "lapokeloca",
+  "name": "lapokeloca-1",
   "private": true,
   "dependencies": {
     "@rails/actioncable": "^6.0.0",
