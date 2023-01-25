@@ -1,6 +1,6 @@
 <h1>List of Pokemons</h1>
 <ul>
   <% @pokemons.each do |pokemon| %>
-    <li><%= pokemon.name %></li>
+    <li><%= pokemon.name %>, <%= pokemon.url %>, <%= pokemon.weight %> </li>
   <% end %>
 </ul>

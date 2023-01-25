@@ -8,12 +8,16 @@ class PokemonsController < ApplicationController
     @pokemons = Pokemon.all
   end
 
- private
+  private
 
   def create_from_api(pokemon_data)
     pokemon_data["results"].each do |pokemon|
-      unless Pokemon.find_by(name: pokemon["name"])
-        Pokemon.create(name: pokemon["name"])
+      if Pokemon.find_by(name: pokemon["name"]).nil?
+        response = RestClient.get(pokemon["url"])
+        data = JSON.parse(response.body)
+        image = data["sprites"]["back_default"]
+        weight = data["weight"]
+        Pokemon.create(name: pokemon["name"], url: pokemon["url"], imagen: image, weight: weight)
       end
     end
   end
