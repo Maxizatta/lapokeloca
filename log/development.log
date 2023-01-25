@@ -13798,3 +13798,4 @@ Migrating to AddUrlToPokemon (20230123152011)
   [1m[36mActiveRecord::InternalMetadata Load (2.3ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
   [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(2037156752416606590)[0m
   [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mPokemon Load (7.2ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons" ORDER BY "pokemons"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
