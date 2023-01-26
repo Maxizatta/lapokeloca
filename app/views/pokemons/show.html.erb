@@ -1,2 +1,15 @@
-<h1> <%= @pokemon.name %> </h1>
-<p> URL: <%= @pokemon.url %> </p>
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <h1 class="text-center"> <%= @pokemon.name %> </h1>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-4">
+      <img src="<%= @pokemon.url %>" class="img-fluid">
+    </div>
+    <div class="col-md-8">
+      <p> <strong>Peso:</strong> <%= @pokemon.weight %> </p>
+    </div>
+  </div>
+</div>
