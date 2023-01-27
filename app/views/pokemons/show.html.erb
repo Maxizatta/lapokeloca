@@ -1,5 +1,3 @@
-
-
 <% provide(:title, @pokemon.name) %>
 
 <div class="text-center">
@@ -11,10 +9,16 @@
     <img class="card-img-top" src="<%= @pokemon.imagen %>" alt="Card image cap">
     <div class="card-body">
       <h5 class="card-title"> <%= @pokemon.name %> </h5>
-      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
     </div>
     <ul class="list-group list-group-flush">
-      <li class="list-group-item"><strong>Peso:</strong> <%= @pokemon.weight %> </li>
+      <li class="list-group-item"><strong>Weight:</strong> <%= @pokemon.weight %> </li>
+      <li class="list-group-item"><strong>Abilities: </strong>
+        <ul>
+          <% @pokemon.abilities.each do |ability| %>
+            <div> <%= ability %> </div>
+          <% end %>
+        </ul>
+      </li>
     </ul>
     <div class="card-body text-center">
       <%= link_to "Back", root_path(:page => session[:page_number]), class: "btn btn-primary" %>
