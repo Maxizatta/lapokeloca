@@ -2,6 +2,8 @@
   <h1 class="text-primary">List of Pokemons</h1>
 </div>
 
+<div class="red-bg"> </div>
+
 <div class="container">
   <div class="row">
     <% @pokemons.each_with_index do |pokemon, index| %>
@@ -11,7 +13,9 @@
           <div class="card-body">
             <h5 class="card-title"> <%= pokemon.name %> </h5>
             <p class="card-text"> <%= pokemon.weight %> Kg </p>
-            <a href="<%= pokemon_path(pokemon) %>" class="btn btn-primary no-underline">Check more details!</a>
+           <div class="text-center">
+              <a href="<%= pokemon_path(pokemon) %>" class="btn btn-primary no-underline">Check more details!</a>
+            </div>
           </div>
         </div>
       </div>
@@ -20,5 +24,6 @@
         <div class="row">
       <% end %>
     <% end %>
+    <%= paginate @pokemons %>
   </div>
 </div>
