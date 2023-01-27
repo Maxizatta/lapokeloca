@@ -24557,3 +24557,1650 @@ Processing by PokemonsController#index as HTML
 Completed 200 OK in 117ms (Views: 20.7ms | ActiveRecord: 19.3ms | Allocations: 26678)
 
 
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT pg_try_advisory_lock(2037156752416606590)[0m
+  [1m[35m (7.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to AddAbilityToPokemons (20230127032055)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (7.2ms)[0m  [1m[35mALTER TABLE "pokemons" ADD "ability" array[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_advisory_unlock(2037156752416606590)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(2037156752416606590)[0m
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to AddAbilityToPokemons (20230127032055)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (22.4ms)[0m  [1m[35mALTER TABLE "pokemons" ADD "abilities" text[] DEFAULT '{}'[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20230127032055"]]
+  [1m[36mTRANSACTION (20.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (2.0ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT pg_advisory_unlock(2037156752416606590)[0m
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mPokemon Load (7.3ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons"[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPokemon Destroy (7.0ms)[0m  [1m[31mDELETE FROM "pokemons" WHERE "pokemons"."id" = $1[0m  [["id", 1806]]
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPokemon Destroy (0.2ms)[0m  [1m[31mDELETE FROM "pokemons" WHERE "pokemons"."id" = $1[0m  [["id", 1807]]
+  [1m[36mTRANSACTION (5.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPokemon Destroy (0.2ms)[0m  [1m[31mDELETE FROM "pokemons" WHERE "pokemons"."id" = $1[0m  [["id", 1808]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPokemon Destroy (0.2ms)[0m  [1m[31mDELETE FROM "pokemons" WHERE "pokemons"."id" = $1[0m  [["id", 1809]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPokemon Destroy (0.2ms)[0m  [1m[31mDELETE FROM "pokemons" WHERE "pokemons"."id" = $1[0m  [["id", 1810]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPokemon Destroy (4.7ms)[0m  [1m[31mDELETE FROM "pokemons" WHERE "pokemons"."id" = $1[0m  [["id", 1811]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPokemon Destroy (0.3ms)[0m  [1m[31mDELETE FROM "pokemons" WHERE "pokemons"."id" = $1[0m  [["id", 1812]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPokemon Destroy (0.2ms)[0m  [1m[31mDELETE FROM "pokemons" WHERE "pokemons"."id" = $1[0m  [["id", 1813]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPokemon Destroy (0.2ms)[0m  [1m[31mDELETE FROM "pokemons" WHERE "pokemons"."id" = $1[0m  [["id", 1814]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPokemon Destroy (0.2ms)[0m  [1m[31mDELETE FROM "pokemons" WHERE "pokemons"."id" = $1[0m  [["id", 1815]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPokemon Destroy (1.0ms)[0m  [1m[31mDELETE FROM "pokemons" WHERE "pokemons"."id" = $1[0m  [["id", 1816]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPokemon Destroy (0.2ms)[0m  [1m[31mDELETE FROM "pokemons" WHERE "pokemons"."id" = $1[0m  [["id", 1817]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPokemon Destroy (0.2ms)[0m  [1m[31mDELETE FROM "pokemons" WHERE "pokemons"."id" = $1[0m  [["id", 1818]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPokemon Destroy (0.2ms)[0m  [1m[31mDELETE FROM "pokemons" WHERE "pokemons"."id" = $1[0m  [["id", 1819]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPokemon Destroy (1.0ms)[0m  [1m[31mDELETE FROM "pokemons" WHERE "pokemons"."id" = $1[0m  [["id", 1820]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPokemon Destroy (0.2ms)[0m  [1m[31mDELETE FROM "pokemons" WHERE "pokemons"."id" = $1[0m  [["id", 1821]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPokemon Destroy (0.2ms)[0m  [1m[31mDELETE FROM "pokemons" WHERE "pokemons"."id" = $1[0m  [["id", 1822]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPokemon Destroy (0.2ms)[0m  [1m[31mDELETE FROM "pokemons" WHERE "pokemons"."id" = $1[0m  [["id", 1823]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPokemon Destroy (6.0ms)[0m  [1m[31mDELETE FROM "pokemons" WHERE "pokemons"."id" = $1[0m  [["id", 1824]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPokemon Destroy (0.1ms)[0m  [1m[31mDELETE FROM "pokemons" WHERE "pokemons"."id" = $1[0m  [["id", 1825]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+Started GET "/?page=3" for 127.0.0.1 at 2023-01-27 18:49:08 -0300
+  [1m[35m (4.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PokemonsController#index as HTML
+  Parameters: {"page"=>"3"}
+  [1m[36mPokemon Load (1.8ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons" WHERE "pokemons"."name" = $1 LIMIT $2[0m  [["name", "bulbasaur"], ["LIMIT", 1]]
+  ↳ app/controllers/pokemons_controller.rb:23:in `block in create_from_api'
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/pokemons_controller.rb:28:in `block in create_from_api'
+  [1m[36mPokemon Create (3.2ms)[0m  [1m[32mINSERT INTO "pokemons" ("name", "created_at", "updated_at", "url", "imagen", "weight") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "bulbasaur"], ["created_at", "2023-01-27 21:49:08.802837"], ["updated_at", "2023-01-27 21:49:08.802837"], ["url", "https://pokeapi.co/api/v2/pokemon/1/"], ["imagen", "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/1.png"], ["weight", 69]]
+  ↳ app/controllers/pokemons_controller.rb:28:in `block in create_from_api'
+  [1m[36mTRANSACTION (3.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/pokemons_controller.rb:28:in `block in create_from_api'
+Completed 500 Internal Server Error in 167ms (ActiveRecord: 22.5ms | Allocations: 35494)
+
+
+  
+NameError (uninitialized constant PokemonsController::Ability):
+  
+app/controllers/pokemons_controller.rb:31:in `block (2 levels) in create_from_api'
+app/controllers/pokemons_controller.rb:30:in `each'
+app/controllers/pokemons_controller.rb:30:in `block in create_from_api'
+app/controllers/pokemons_controller.rb:22:in `each'
+app/controllers/pokemons_controller.rb:22:in `create_from_api'
+app/controllers/pokemons_controller.rb:9:in `index'
+Started GET "/?page=3" for 127.0.0.1 at 2023-01-27 19:24:20 -0300
+Processing by PokemonsController#index as HTML
+  Parameters: {"page"=>"3"}
+  [1m[36mPokemon Load (1.9ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons" WHERE "pokemons"."name" = $1 LIMIT $2[0m  [["name", "bulbasaur"], ["LIMIT", 1]]
+  ↳ app/controllers/pokemons_controller.rb:23:in `block in create_from_api'
+  [1m[36mPokemon Load (0.5ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons" WHERE "pokemons"."name" = $1 LIMIT $2[0m  [["name", "ivysaur"], ["LIMIT", 1]]
+  ↳ app/controllers/pokemons_controller.rb:23:in `block in create_from_api'
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/pokemons_controller.rb:28:in `block in create_from_api'
+  [1m[36mPokemon Create (13.7ms)[0m  [1m[32mINSERT INTO "pokemons" ("name", "created_at", "updated_at", "url", "imagen", "weight") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "ivysaur"], ["created_at", "2023-01-27 22:24:21.015696"], ["updated_at", "2023-01-27 22:24:21.015696"], ["url", "https://pokeapi.co/api/v2/pokemon/2/"], ["imagen", "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/2.png"], ["weight", 130]]
+  ↳ app/controllers/pokemons_controller.rb:28:in `block in create_from_api'
+  [1m[36mTRANSACTION (1.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/pokemons_controller.rb:28:in `block in create_from_api'
+Completed 500 Internal Server Error in 346ms (ActiveRecord: 103.1ms | Allocations: 31896)
+
+
+  
+RuntimeError ():
+  
+app/controllers/pokemons_controller.rb:29:in `block in create_from_api'
+app/controllers/pokemons_controller.rb:22:in `each'
+app/controllers/pokemons_controller.rb:22:in `create_from_api'
+app/controllers/pokemons_controller.rb:9:in `index'
+Started GET "/?page=3" for 127.0.0.1 at 2023-01-27 19:28:00 -0300
+Processing by PokemonsController#index as HTML
+  Parameters: {"page"=>"3"}
+  [1m[36mPokemon Load (0.7ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons" WHERE "pokemons"."name" = $1 LIMIT $2[0m  [["name", "bulbasaur"], ["LIMIT", 1]]
+  ↳ app/controllers/pokemons_controller.rb:23:in `block in create_from_api'
+  [1m[36mPokemon Load (0.9ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons" WHERE "pokemons"."name" = $1 LIMIT $2[0m  [["name", "ivysaur"], ["LIMIT", 1]]
+  ↳ app/controllers/pokemons_controller.rb:23:in `block in create_from_api'
+  [1m[36mPokemon Load (0.7ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons" WHERE "pokemons"."name" = $1 LIMIT $2[0m  [["name", "venusaur"], ["LIMIT", 1]]
+  ↳ app/controllers/pokemons_controller.rb:23:in `block in create_from_api'
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/pokemons_controller.rb:28:in `block in create_from_api'
+  [1m[36mPokemon Create (2.2ms)[0m  [1m[32mINSERT INTO "pokemons" ("name", "created_at", "updated_at", "url", "imagen", "weight") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "venusaur"], ["created_at", "2023-01-27 22:28:00.498981"], ["updated_at", "2023-01-27 22:28:00.498981"], ["url", "https://pokeapi.co/api/v2/pokemon/3/"], ["imagen", "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/3.png"], ["weight", 1000]]
+  ↳ app/controllers/pokemons_controller.rb:28:in `block in create_from_api'
+  [1m[36mTRANSACTION (1.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/pokemons_controller.rb:28:in `block in create_from_api'
+Completed 500 Internal Server Error in 196ms (ActiveRecord: 43.7ms | Allocations: 30253)
+
+
+  
+RuntimeError ():
+  
+app/controllers/pokemons_controller.rb:30:in `block in create_from_api'
+app/controllers/pokemons_controller.rb:22:in `each'
+app/controllers/pokemons_controller.rb:22:in `create_from_api'
+app/controllers/pokemons_controller.rb:9:in `index'
+Started GET "/?page=3" for 127.0.0.1 at 2023-01-27 19:28:45 -0300
+Processing by PokemonsController#index as HTML
+  Parameters: {"page"=>"3"}
+  [1m[36mPokemon Load (0.7ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons" WHERE "pokemons"."name" = $1 LIMIT $2[0m  [["name", "bulbasaur"], ["LIMIT", 1]]
+  ↳ app/controllers/pokemons_controller.rb:23:in `block in create_from_api'
+  [1m[36mPokemon Load (0.6ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons" WHERE "pokemons"."name" = $1 LIMIT $2[0m  [["name", "ivysaur"], ["LIMIT", 1]]
+  ↳ app/controllers/pokemons_controller.rb:23:in `block in create_from_api'
+  [1m[36mPokemon Load (2.7ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons" WHERE "pokemons"."name" = $1 LIMIT $2[0m  [["name", "venusaur"], ["LIMIT", 1]]
+  ↳ app/controllers/pokemons_controller.rb:23:in `block in create_from_api'
+  [1m[36mPokemon Load (0.4ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons" WHERE "pokemons"."name" = $1 LIMIT $2[0m  [["name", "charmander"], ["LIMIT", 1]]
+  ↳ app/controllers/pokemons_controller.rb:23:in `block in create_from_api'
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/pokemons_controller.rb:28:in `block in create_from_api'
+  [1m[36mPokemon Create (0.7ms)[0m  [1m[32mINSERT INTO "pokemons" ("name", "created_at", "updated_at", "url", "imagen", "weight") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "charmander"], ["created_at", "2023-01-27 22:28:46.011118"], ["updated_at", "2023-01-27 22:28:46.011118"], ["url", "https://pokeapi.co/api/v2/pokemon/4/"], ["imagen", "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/4.png"], ["weight", 85]]
+  ↳ app/controllers/pokemons_controller.rb:28:in `block in create_from_api'
+  [1m[36mTRANSACTION (1.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/pokemons_controller.rb:28:in `block in create_from_api'
+Completed 500 Internal Server Error in 132ms (ActiveRecord: 22.9ms | Allocations: 32826)
+
+
+  
+RuntimeError ():
+  
+app/controllers/pokemons_controller.rb:31:in `block (2 levels) in create_from_api'
+app/controllers/pokemons_controller.rb:30:in `each'
+app/controllers/pokemons_controller.rb:30:in `block in create_from_api'
+app/controllers/pokemons_controller.rb:22:in `each'
+app/controllers/pokemons_controller.rb:22:in `create_from_api'
+app/controllers/pokemons_controller.rb:9:in `index'
+Started GET "/?page=3" for 127.0.0.1 at 2023-01-27 19:29:01 -0300
+Processing by PokemonsController#index as HTML
+  Parameters: {"page"=>"3"}
+  [1m[36mPokemon Load (0.7ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons" WHERE "pokemons"."name" = $1 LIMIT $2[0m  [["name", "bulbasaur"], ["LIMIT", 1]]
+  ↳ app/controllers/pokemons_controller.rb:23:in `block in create_from_api'
+  [1m[36mPokemon Load (0.6ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons" WHERE "pokemons"."name" = $1 LIMIT $2[0m  [["name", "ivysaur"], ["LIMIT", 1]]
+  ↳ app/controllers/pokemons_controller.rb:23:in `block in create_from_api'
+  [1m[36mPokemon Load (0.5ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons" WHERE "pokemons"."name" = $1 LIMIT $2[0m  [["name", "venusaur"], ["LIMIT", 1]]
+  ↳ app/controllers/pokemons_controller.rb:23:in `block in create_from_api'
+  [1m[36mPokemon Load (0.5ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons" WHERE "pokemons"."name" = $1 LIMIT $2[0m  [["name", "charmander"], ["LIMIT", 1]]
+  ↳ app/controllers/pokemons_controller.rb:23:in `block in create_from_api'
+  [1m[36mPokemon Load (0.5ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons" WHERE "pokemons"."name" = $1 LIMIT $2[0m  [["name", "charmeleon"], ["LIMIT", 1]]
+  ↳ app/controllers/pokemons_controller.rb:23:in `block in create_from_api'
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/pokemons_controller.rb:28:in `block in create_from_api'
+  [1m[36mPokemon Create (0.9ms)[0m  [1m[32mINSERT INTO "pokemons" ("name", "created_at", "updated_at", "url", "imagen", "weight") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "charmeleon"], ["created_at", "2023-01-27 22:29:01.580711"], ["updated_at", "2023-01-27 22:29:01.580711"], ["url", "https://pokeapi.co/api/v2/pokemon/5/"], ["imagen", "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/5.png"], ["weight", 190]]
+  ↳ app/controllers/pokemons_controller.rb:28:in `block in create_from_api'
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/pokemons_controller.rb:28:in `block in create_from_api'
+Completed 500 Internal Server Error in 145ms (ActiveRecord: 11.1ms | Allocations: 33129)
+
+
+  
+NameError (uninitialized constant PokemonsController::Ability):
+  
+app/controllers/pokemons_controller.rb:31:in `block (2 levels) in create_from_api'
+app/controllers/pokemons_controller.rb:30:in `each'
+app/controllers/pokemons_controller.rb:30:in `block in create_from_api'
+app/controllers/pokemons_controller.rb:22:in `each'
+app/controllers/pokemons_controller.rb:22:in `create_from_api'
+app/controllers/pokemons_controller.rb:9:in `index'
+Started PUT "/__web_console/repl_sessions/c5c6bd4317b56904332d37141ef5b58d" for 127.0.0.1 at 2023-01-27 19:32:35 -0300
+Started PUT "/__web_console/repl_sessions/c5c6bd4317b56904332d37141ef5b58d" for 127.0.0.1 at 2023-01-27 19:32:37 -0300
+Started GET "/?page=3" for 127.0.0.1 at 2023-01-27 19:36:30 -0300
+Processing by PokemonsController#index as HTML
+  Parameters: {"page"=>"3"}
+  [1m[36mPokemon Load (3.3ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons" WHERE "pokemons"."name" = $1 LIMIT $2[0m  [["name", "bulbasaur"], ["LIMIT", 1]]
+  ↳ app/controllers/pokemons_controller.rb:23:in `block in create_from_api'
+  [1m[36mPokemon Load (1.3ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons" WHERE "pokemons"."name" = $1 LIMIT $2[0m  [["name", "ivysaur"], ["LIMIT", 1]]
+  ↳ app/controllers/pokemons_controller.rb:23:in `block in create_from_api'
+  [1m[36mPokemon Load (0.4ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons" WHERE "pokemons"."name" = $1 LIMIT $2[0m  [["name", "venusaur"], ["LIMIT", 1]]
+  ↳ app/controllers/pokemons_controller.rb:23:in `block in create_from_api'
+  [1m[36mPokemon Load (0.3ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons" WHERE "pokemons"."name" = $1 LIMIT $2[0m  [["name", "charmander"], ["LIMIT", 1]]
+  ↳ app/controllers/pokemons_controller.rb:23:in `block in create_from_api'
+  [1m[36mPokemon Load (0.3ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons" WHERE "pokemons"."name" = $1 LIMIT $2[0m  [["name", "charmeleon"], ["LIMIT", 1]]
+  ↳ app/controllers/pokemons_controller.rb:23:in `block in create_from_api'
+  [1m[36mPokemon Load (0.3ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons" WHERE "pokemons"."name" = $1 LIMIT $2[0m  [["name", "charizard"], ["LIMIT", 1]]
+  ↳ app/controllers/pokemons_controller.rb:23:in `block in create_from_api'
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/pokemons_controller.rb:28:in `block in create_from_api'
+  [1m[36mPokemon Create (7.2ms)[0m  [1m[32mINSERT INTO "pokemons" ("name", "created_at", "updated_at", "url", "imagen", "weight") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "charizard"], ["created_at", "2023-01-27 22:36:31.417495"], ["updated_at", "2023-01-27 22:36:31.417495"], ["url", "https://pokeapi.co/api/v2/pokemon/6/"], ["imagen", "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/6.png"], ["weight", 905]]
+  ↳ app/controllers/pokemons_controller.rb:28:in `block in create_from_api'
+  [1m[36mTRANSACTION (20.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/pokemons_controller.rb:28:in `block in create_from_api'
+Completed 500 Internal Server Error in 447ms (ActiveRecord: 152.6ms | Allocations: 41011)
+
+
+  
+RuntimeError ():
+  
+app/controllers/pokemons_controller.rb:31:in `block (2 levels) in create_from_api'
+app/controllers/pokemons_controller.rb:30:in `each'
+app/controllers/pokemons_controller.rb:30:in `block in create_from_api'
+app/controllers/pokemons_controller.rb:22:in `each'
+app/controllers/pokemons_controller.rb:22:in `create_from_api'
+app/controllers/pokemons_controller.rb:9:in `index'
+Started PUT "/__web_console/repl_sessions/52aebfa90d909dd6643d57d27dc98ca1" for 127.0.0.1 at 2023-01-27 19:39:18 -0300
+Started PUT "/__web_console/repl_sessions/52aebfa90d909dd6643d57d27dc98ca1" for 127.0.0.1 at 2023-01-27 19:39:20 -0300
+Started GET "/?page=3" for 127.0.0.1 at 2023-01-27 19:44:54 -0300
+Processing by PokemonsController#index as HTML
+  Parameters: {"page"=>"3"}
+  [1m[36mPokemon Load (2.7ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons" WHERE "pokemons"."name" = $1 LIMIT $2[0m  [["name", "bulbasaur"], ["LIMIT", 1]]
+  ↳ app/controllers/pokemons_controller.rb:23:in `block in create_from_api'
+  [1m[36mPokemon Load (4.2ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons" WHERE "pokemons"."name" = $1 LIMIT $2[0m  [["name", "ivysaur"], ["LIMIT", 1]]
+  ↳ app/controllers/pokemons_controller.rb:23:in `block in create_from_api'
+  [1m[36mPokemon Load (0.6ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons" WHERE "pokemons"."name" = $1 LIMIT $2[0m  [["name", "venusaur"], ["LIMIT", 1]]
+  ↳ app/controllers/pokemons_controller.rb:23:in `block in create_from_api'
+  [1m[36mPokemon Load (0.5ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons" WHERE "pokemons"."name" = $1 LIMIT $2[0m  [["name", "charmander"], ["LIMIT", 1]]
+  ↳ app/controllers/pokemons_controller.rb:23:in `block in create_from_api'
+  [1m[36mPokemon Load (0.5ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons" WHERE "pokemons"."name" = $1 LIMIT $2[0m  [["name", "charmeleon"], ["LIMIT", 1]]
+  ↳ app/controllers/pokemons_controller.rb:23:in `block in create_from_api'
+  [1m[36mPokemon Load (0.5ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons" WHERE "pokemons"."name" = $1 LIMIT $2[0m  [["name", "charizard"], ["LIMIT", 1]]
+  ↳ app/controllers/pokemons_controller.rb:23:in `block in create_from_api'
+  [1m[36mPokemon Load (0.5ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons" WHERE "pokemons"."name" = $1 LIMIT $2[0m  [["name", "squirtle"], ["LIMIT", 1]]
+  ↳ app/controllers/pokemons_controller.rb:23:in `block in create_from_api'
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/pokemons_controller.rb:28:in `block in create_from_api'
+  [1m[36mPokemon Create (7.1ms)[0m  [1m[32mINSERT INTO "pokemons" ("name", "created_at", "updated_at", "url", "imagen", "weight") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "squirtle"], ["created_at", "2023-01-27 22:44:54.440586"], ["updated_at", "2023-01-27 22:44:54.440586"], ["url", "https://pokeapi.co/api/v2/pokemon/7/"], ["imagen", "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/7.png"], ["weight", 90]]
+  ↳ app/controllers/pokemons_controller.rb:28:in `block in create_from_api'
+  [1m[36mTRANSACTION (1.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/pokemons_controller.rb:28:in `block in create_from_api'
+Completed 500 Internal Server Error in 349ms (ActiveRecord: 60.1ms | Allocations: 39084)
+
+
+  
+NoMethodError (undefined method `abilities' for nil:NilClass):
+  
+app/controllers/pokemons_controller.rb:32:in `block (2 levels) in create_from_api'
+app/controllers/pokemons_controller.rb:30:in `each'
+app/controllers/pokemons_controller.rb:30:in `block in create_from_api'
+app/controllers/pokemons_controller.rb:22:in `each'
+app/controllers/pokemons_controller.rb:22:in `create_from_api'
+app/controllers/pokemons_controller.rb:9:in `index'
+Started PUT "/__web_console/repl_sessions/41071c69910361608bb72dfd4576bae1" for 127.0.0.1 at 2023-01-27 19:46:27 -0300
+Started PUT "/__web_console/repl_sessions/41071c69910361608bb72dfd4576bae1" for 127.0.0.1 at 2023-01-27 19:46:28 -0300
+Started GET "/?page=3" for 127.0.0.1 at 2023-01-27 19:58:43 -0300
+Processing by PokemonsController#index as HTML
+  Parameters: {"page"=>"3"}
+  [1m[36mPokemon Load (2.0ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons" WHERE "pokemons"."name" = $1 LIMIT $2[0m  [["name", "bulbasaur"], ["LIMIT", 1]]
+  ↳ app/controllers/pokemons_controller.rb:23:in `block in create_from_api'
+  [1m[36mPokemon Load (0.6ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons" WHERE "pokemons"."name" = $1 LIMIT $2[0m  [["name", "ivysaur"], ["LIMIT", 1]]
+  ↳ app/controllers/pokemons_controller.rb:23:in `block in create_from_api'
+  [1m[36mPokemon Load (0.5ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons" WHERE "pokemons"."name" = $1 LIMIT $2[0m  [["name", "venusaur"], ["LIMIT", 1]]
+  ↳ app/controllers/pokemons_controller.rb:23:in `block in create_from_api'
+  [1m[36mPokemon Load (0.5ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons" WHERE "pokemons"."name" = $1 LIMIT $2[0m  [["name", "charmander"], ["LIMIT", 1]]
+  ↳ app/controllers/pokemons_controller.rb:23:in `block in create_from_api'
+  [1m[36mPokemon Load (0.5ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons" WHERE "pokemons"."name" = $1 LIMIT $2[0m  [["name", "charmeleon"], ["LIMIT", 1]]
+  ↳ app/controllers/pokemons_controller.rb:23:in `block in create_from_api'
+  [1m[36mPokemon Load (0.5ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons" WHERE "pokemons"."name" = $1 LIMIT $2[0m  [["name", "charizard"], ["LIMIT", 1]]
+  ↳ app/controllers/pokemons_controller.rb:23:in `block in create_from_api'
+  [1m[36mPokemon Load (0.4ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons" WHERE "pokemons"."name" = $1 LIMIT $2[0m  [["name", "squirtle"], ["LIMIT", 1]]
+  ↳ app/controllers/pokemons_controller.rb:23:in `block in create_from_api'
+  [1m[36mPokemon Load (0.5ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons" WHERE "pokemons"."name" = $1 LIMIT $2[0m  [["name", "wartortle"], ["LIMIT", 1]]
+  ↳ app/controllers/pokemons_controller.rb:23:in `block in create_from_api'
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/pokemons_controller.rb:28:in `block in create_from_api'
+  [1m[36mPokemon Create (8.4ms)[0m  [1m[32mINSERT INTO "pokemons" ("name", "created_at", "updated_at", "url", "imagen", "weight") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "wartortle"], ["created_at", "2023-01-27 22:58:43.492829"], ["updated_at", "2023-01-27 22:58:43.492829"], ["url", "https://pokeapi.co/api/v2/pokemon/8/"], ["imagen", "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/8.png"], ["weight", 225]]
+  ↳ app/controllers/pokemons_controller.rb:28:in `block in create_from_api'
+  [1m[36mTRANSACTION (3.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/pokemons_controller.rb:28:in `block in create_from_api'
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/pokemons_controller.rb:34:in `block in create_from_api'
+  [1m[36mPokemon Update (7.2ms)[0m  [1m[33mUPDATE "pokemons" SET "updated_at" = $1, "abilities" = $2 WHERE "pokemons"."id" = $3[0m  [["updated_at", "2023-01-27 22:58:43.522746"], ["abilities", "{torrent,rain-dish}"], ["id", 1833]]
+  ↳ app/controllers/pokemons_controller.rb:34:in `block in create_from_api'
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/pokemons_controller.rb:34:in `block in create_from_api'
+  [1m[36mPokemon Load (0.4ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons" WHERE "pokemons"."name" = $1 LIMIT $2[0m  [["name", "blastoise"], ["LIMIT", 1]]
+  ↳ app/controllers/pokemons_controller.rb:23:in `block in create_from_api'
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/pokemons_controller.rb:28:in `block in create_from_api'
+  [1m[36mPokemon Create (0.6ms)[0m  [1m[32mINSERT INTO "pokemons" ("name", "created_at", "updated_at", "url", "imagen", "weight") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "blastoise"], ["created_at", "2023-01-27 22:58:43.588201"], ["updated_at", "2023-01-27 22:58:43.588201"], ["url", "https://pokeapi.co/api/v2/pokemon/9/"], ["imagen", "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/9.png"], ["weight", 855]]
+  ↳ app/controllers/pokemons_controller.rb:28:in `block in create_from_api'
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/pokemons_controller.rb:28:in `block in create_from_api'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/pokemons_controller.rb:34:in `block in create_from_api'
+  [1m[36mPokemon Update (2.3ms)[0m  [1m[33mUPDATE "pokemons" SET "updated_at" = $1, "abilities" = $2 WHERE "pokemons"."id" = $3[0m  [["updated_at", "2023-01-27 22:58:43.591219"], ["abilities", "{torrent,rain-dish}"], ["id", 1834]]
+  ↳ app/controllers/pokemons_controller.rb:34:in `block in create_from_api'
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/pokemons_controller.rb:34:in `block in create_from_api'
+  [1m[36mPokemon Load (0.4ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons" WHERE "pokemons"."name" = $1 LIMIT $2[0m  [["name", "caterpie"], ["LIMIT", 1]]
+  ↳ app/controllers/pokemons_controller.rb:23:in `block in create_from_api'
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/pokemons_controller.rb:28:in `block in create_from_api'
+  [1m[36mPokemon Create (0.7ms)[0m  [1m[32mINSERT INTO "pokemons" ("name", "created_at", "updated_at", "url", "imagen", "weight") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "caterpie"], ["created_at", "2023-01-27 22:58:43.633200"], ["updated_at", "2023-01-27 22:58:43.633200"], ["url", "https://pokeapi.co/api/v2/pokemon/10/"], ["imagen", "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/10.png"], ["weight", 29]]
+  ↳ app/controllers/pokemons_controller.rb:28:in `block in create_from_api'
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/pokemons_controller.rb:28:in `block in create_from_api'
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/pokemons_controller.rb:34:in `block in create_from_api'
+  [1m[36mPokemon Update (0.9ms)[0m  [1m[33mUPDATE "pokemons" SET "updated_at" = $1, "abilities" = $2 WHERE "pokemons"."id" = $3[0m  [["updated_at", "2023-01-27 22:58:43.636940"], ["abilities", "{shield-dust,run-away}"], ["id", 1835]]
+  ↳ app/controllers/pokemons_controller.rb:34:in `block in create_from_api'
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/pokemons_controller.rb:34:in `block in create_from_api'
+  [1m[36mPokemon Load (0.4ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons" WHERE "pokemons"."name" = $1 LIMIT $2[0m  [["name", "metapod"], ["LIMIT", 1]]
+  ↳ app/controllers/pokemons_controller.rb:23:in `block in create_from_api'
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/pokemons_controller.rb:28:in `block in create_from_api'
+  [1m[36mPokemon Create (0.7ms)[0m  [1m[32mINSERT INTO "pokemons" ("name", "created_at", "updated_at", "url", "imagen", "weight") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "metapod"], ["created_at", "2023-01-27 22:58:43.682820"], ["updated_at", "2023-01-27 22:58:43.682820"], ["url", "https://pokeapi.co/api/v2/pokemon/11/"], ["imagen", "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/11.png"], ["weight", 99]]
+  ↳ app/controllers/pokemons_controller.rb:28:in `block in create_from_api'
+  [1m[36mTRANSACTION (1.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/pokemons_controller.rb:28:in `block in create_from_api'
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/pokemons_controller.rb:34:in `block in create_from_api'
+  [1m[36mPokemon Update (0.4ms)[0m  [1m[33mUPDATE "pokemons" SET "updated_at" = $1, "abilities" = $2 WHERE "pokemons"."id" = $3[0m  [["updated_at", "2023-01-27 22:58:43.686609"], ["abilities", "{shed-skin}"], ["id", 1836]]
+  ↳ app/controllers/pokemons_controller.rb:34:in `block in create_from_api'
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/pokemons_controller.rb:34:in `block in create_from_api'
+  [1m[36mPokemon Load (0.3ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons" WHERE "pokemons"."name" = $1 LIMIT $2[0m  [["name", "butterfree"], ["LIMIT", 1]]
+  ↳ app/controllers/pokemons_controller.rb:23:in `block in create_from_api'
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/pokemons_controller.rb:28:in `block in create_from_api'
+  [1m[36mPokemon Create (0.8ms)[0m  [1m[32mINSERT INTO "pokemons" ("name", "created_at", "updated_at", "url", "imagen", "weight") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "butterfree"], ["created_at", "2023-01-27 22:58:43.733118"], ["updated_at", "2023-01-27 22:58:43.733118"], ["url", "https://pokeapi.co/api/v2/pokemon/12/"], ["imagen", "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/12.png"], ["weight", 320]]
+  ↳ app/controllers/pokemons_controller.rb:28:in `block in create_from_api'
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/pokemons_controller.rb:28:in `block in create_from_api'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/pokemons_controller.rb:34:in `block in create_from_api'
+  [1m[36mPokemon Update (2.2ms)[0m  [1m[33mUPDATE "pokemons" SET "updated_at" = $1, "abilities" = $2 WHERE "pokemons"."id" = $3[0m  [["updated_at", "2023-01-27 22:58:43.736111"], ["abilities", "{compound-eyes,tinted-lens}"], ["id", 1837]]
+  ↳ app/controllers/pokemons_controller.rb:34:in `block in create_from_api'
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/pokemons_controller.rb:34:in `block in create_from_api'
+  [1m[36mPokemon Load (0.3ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons" WHERE "pokemons"."name" = $1 LIMIT $2[0m  [["name", "weedle"], ["LIMIT", 1]]
+  ↳ app/controllers/pokemons_controller.rb:23:in `block in create_from_api'
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/pokemons_controller.rb:28:in `block in create_from_api'
+  [1m[36mPokemon Create (0.5ms)[0m  [1m[32mINSERT INTO "pokemons" ("name", "created_at", "updated_at", "url", "imagen", "weight") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "weedle"], ["created_at", "2023-01-27 22:58:43.789560"], ["updated_at", "2023-01-27 22:58:43.789560"], ["url", "https://pokeapi.co/api/v2/pokemon/13/"], ["imagen", "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/13.png"], ["weight", 32]]
+  ↳ app/controllers/pokemons_controller.rb:28:in `block in create_from_api'
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/pokemons_controller.rb:28:in `block in create_from_api'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/pokemons_controller.rb:34:in `block in create_from_api'
+  [1m[36mPokemon Update (2.3ms)[0m  [1m[33mUPDATE "pokemons" SET "updated_at" = $1, "abilities" = $2 WHERE "pokemons"."id" = $3[0m  [["updated_at", "2023-01-27 22:58:43.792066"], ["abilities", "{shield-dust,run-away}"], ["id", 1838]]
+  ↳ app/controllers/pokemons_controller.rb:34:in `block in create_from_api'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/pokemons_controller.rb:34:in `block in create_from_api'
+  [1m[36mPokemon Load (0.3ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons" WHERE "pokemons"."name" = $1 LIMIT $2[0m  [["name", "kakuna"], ["LIMIT", 1]]
+  ↳ app/controllers/pokemons_controller.rb:23:in `block in create_from_api'
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/pokemons_controller.rb:28:in `block in create_from_api'
+  [1m[36mPokemon Create (5.6ms)[0m  [1m[32mINSERT INTO "pokemons" ("name", "created_at", "updated_at", "url", "imagen", "weight") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "kakuna"], ["created_at", "2023-01-27 22:58:43.834270"], ["updated_at", "2023-01-27 22:58:43.834270"], ["url", "https://pokeapi.co/api/v2/pokemon/14/"], ["imagen", "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/14.png"], ["weight", 100]]
+  ↳ app/controllers/pokemons_controller.rb:28:in `block in create_from_api'
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/pokemons_controller.rb:28:in `block in create_from_api'
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/pokemons_controller.rb:34:in `block in create_from_api'
+  [1m[36mPokemon Update (0.6ms)[0m  [1m[33mUPDATE "pokemons" SET "updated_at" = $1, "abilities" = $2 WHERE "pokemons"."id" = $3[0m  [["updated_at", "2023-01-27 22:58:43.842068"], ["abilities", "{shed-skin}"], ["id", 1839]]
+  ↳ app/controllers/pokemons_controller.rb:34:in `block in create_from_api'
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/pokemons_controller.rb:34:in `block in create_from_api'
+  [1m[36mPokemon Load (0.4ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons" WHERE "pokemons"."name" = $1 LIMIT $2[0m  [["name", "beedrill"], ["LIMIT", 1]]
+  ↳ app/controllers/pokemons_controller.rb:23:in `block in create_from_api'
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/pokemons_controller.rb:28:in `block in create_from_api'
+  [1m[36mPokemon Create (0.6ms)[0m  [1m[32mINSERT INTO "pokemons" ("name", "created_at", "updated_at", "url", "imagen", "weight") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "beedrill"], ["created_at", "2023-01-27 22:58:43.883450"], ["updated_at", "2023-01-27 22:58:43.883450"], ["url", "https://pokeapi.co/api/v2/pokemon/15/"], ["imagen", "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/15.png"], ["weight", 295]]
+  ↳ app/controllers/pokemons_controller.rb:28:in `block in create_from_api'
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/pokemons_controller.rb:28:in `block in create_from_api'
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/pokemons_controller.rb:34:in `block in create_from_api'
+  [1m[36mPokemon Update (0.5ms)[0m  [1m[33mUPDATE "pokemons" SET "updated_at" = $1, "abilities" = $2 WHERE "pokemons"."id" = $3[0m  [["updated_at", "2023-01-27 22:58:43.886390"], ["abilities", "{swarm,sniper}"], ["id", 1840]]
+  ↳ app/controllers/pokemons_controller.rb:34:in `block in create_from_api'
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/pokemons_controller.rb:34:in `block in create_from_api'
+  [1m[36mPokemon Load (0.4ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons" WHERE "pokemons"."name" = $1 LIMIT $2[0m  [["name", "pidgey"], ["LIMIT", 1]]
+  ↳ app/controllers/pokemons_controller.rb:23:in `block in create_from_api'
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/pokemons_controller.rb:28:in `block in create_from_api'
+  [1m[36mPokemon Create (0.7ms)[0m  [1m[32mINSERT INTO "pokemons" ("name", "created_at", "updated_at", "url", "imagen", "weight") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "pidgey"], ["created_at", "2023-01-27 22:58:43.938307"], ["updated_at", "2023-01-27 22:58:43.938307"], ["url", "https://pokeapi.co/api/v2/pokemon/16/"], ["imagen", "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/16.png"], ["weight", 18]]
+  ↳ app/controllers/pokemons_controller.rb:28:in `block in create_from_api'
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/pokemons_controller.rb:28:in `block in create_from_api'
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/pokemons_controller.rb:34:in `block in create_from_api'
+  [1m[36mPokemon Update (0.6ms)[0m  [1m[33mUPDATE "pokemons" SET "updated_at" = $1, "abilities" = $2 WHERE "pokemons"."id" = $3[0m  [["updated_at", "2023-01-27 22:58:43.941457"], ["abilities", "{keen-eye,tangled-feet,big-pecks}"], ["id", 1841]]
+  ↳ app/controllers/pokemons_controller.rb:34:in `block in create_from_api'
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/pokemons_controller.rb:34:in `block in create_from_api'
+  [1m[36mPokemon Load (0.4ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons" WHERE "pokemons"."name" = $1 LIMIT $2[0m  [["name", "pidgeotto"], ["LIMIT", 1]]
+  ↳ app/controllers/pokemons_controller.rb:23:in `block in create_from_api'
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/pokemons_controller.rb:28:in `block in create_from_api'
+  [1m[36mPokemon Create (0.7ms)[0m  [1m[32mINSERT INTO "pokemons" ("name", "created_at", "updated_at", "url", "imagen", "weight") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "pidgeotto"], ["created_at", "2023-01-27 22:58:43.985758"], ["updated_at", "2023-01-27 22:58:43.985758"], ["url", "https://pokeapi.co/api/v2/pokemon/17/"], ["imagen", "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/17.png"], ["weight", 300]]
+  ↳ app/controllers/pokemons_controller.rb:28:in `block in create_from_api'
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/pokemons_controller.rb:28:in `block in create_from_api'
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/pokemons_controller.rb:34:in `block in create_from_api'
+  [1m[36mPokemon Update (0.6ms)[0m  [1m[33mUPDATE "pokemons" SET "updated_at" = $1, "abilities" = $2 WHERE "pokemons"."id" = $3[0m  [["updated_at", "2023-01-27 22:58:43.988798"], ["abilities", "{keen-eye,tangled-feet,big-pecks}"], ["id", 1842]]
+  ↳ app/controllers/pokemons_controller.rb:34:in `block in create_from_api'
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/pokemons_controller.rb:34:in `block in create_from_api'
+  [1m[36mPokemon Load (0.4ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons" WHERE "pokemons"."name" = $1 LIMIT $2[0m  [["name", "pidgeot"], ["LIMIT", 1]]
+  ↳ app/controllers/pokemons_controller.rb:23:in `block in create_from_api'
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/pokemons_controller.rb:28:in `block in create_from_api'
+  [1m[36mPokemon Create (0.8ms)[0m  [1m[32mINSERT INTO "pokemons" ("name", "created_at", "updated_at", "url", "imagen", "weight") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "pidgeot"], ["created_at", "2023-01-27 22:58:44.030136"], ["updated_at", "2023-01-27 22:58:44.030136"], ["url", "https://pokeapi.co/api/v2/pokemon/18/"], ["imagen", "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/18.png"], ["weight", 395]]
+  ↳ app/controllers/pokemons_controller.rb:28:in `block in create_from_api'
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/pokemons_controller.rb:28:in `block in create_from_api'
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/pokemons_controller.rb:34:in `block in create_from_api'
+  [1m[36mPokemon Update (0.7ms)[0m  [1m[33mUPDATE "pokemons" SET "updated_at" = $1, "abilities" = $2 WHERE "pokemons"."id" = $3[0m  [["updated_at", "2023-01-27 22:58:44.033573"], ["abilities", "{keen-eye,tangled-feet,big-pecks}"], ["id", 1843]]
+  ↳ app/controllers/pokemons_controller.rb:34:in `block in create_from_api'
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/pokemons_controller.rb:34:in `block in create_from_api'
+  [1m[36mPokemon Load (0.4ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons" WHERE "pokemons"."name" = $1 LIMIT $2[0m  [["name", "rattata"], ["LIMIT", 1]]
+  ↳ app/controllers/pokemons_controller.rb:23:in `block in create_from_api'
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/pokemons_controller.rb:28:in `block in create_from_api'
+  [1m[36mPokemon Create (4.3ms)[0m  [1m[32mINSERT INTO "pokemons" ("name", "created_at", "updated_at", "url", "imagen", "weight") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "rattata"], ["created_at", "2023-01-27 22:58:44.084717"], ["updated_at", "2023-01-27 22:58:44.084717"], ["url", "https://pokeapi.co/api/v2/pokemon/19/"], ["imagen", "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/19.png"], ["weight", 35]]
+  ↳ app/controllers/pokemons_controller.rb:28:in `block in create_from_api'
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/pokemons_controller.rb:28:in `block in create_from_api'
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/pokemons_controller.rb:34:in `block in create_from_api'
+  [1m[36mPokemon Update (0.7ms)[0m  [1m[33mUPDATE "pokemons" SET "updated_at" = $1, "abilities" = $2 WHERE "pokemons"."id" = $3[0m  [["updated_at", "2023-01-27 22:58:44.091977"], ["abilities", "{run-away,guts,hustle}"], ["id", 1844]]
+  ↳ app/controllers/pokemons_controller.rb:34:in `block in create_from_api'
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/pokemons_controller.rb:34:in `block in create_from_api'
+  [1m[36mPokemon Load (0.5ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons" WHERE "pokemons"."name" = $1 LIMIT $2[0m  [["name", "raticate"], ["LIMIT", 1]]
+  ↳ app/controllers/pokemons_controller.rb:23:in `block in create_from_api'
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/pokemons_controller.rb:28:in `block in create_from_api'
+  [1m[36mPokemon Create (0.9ms)[0m  [1m[32mINSERT INTO "pokemons" ("name", "created_at", "updated_at", "url", "imagen", "weight") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "raticate"], ["created_at", "2023-01-27 22:58:44.137889"], ["updated_at", "2023-01-27 22:58:44.137889"], ["url", "https://pokeapi.co/api/v2/pokemon/20/"], ["imagen", "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/20.png"], ["weight", 185]]
+  ↳ app/controllers/pokemons_controller.rb:28:in `block in create_from_api'
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/pokemons_controller.rb:28:in `block in create_from_api'
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/pokemons_controller.rb:34:in `block in create_from_api'
+  [1m[36mPokemon Update (0.8ms)[0m  [1m[33mUPDATE "pokemons" SET "updated_at" = $1, "abilities" = $2 WHERE "pokemons"."id" = $3[0m  [["updated_at", "2023-01-27 22:58:44.142761"], ["abilities", "{run-away,guts,hustle}"], ["id", 1845]]
+  ↳ app/controllers/pokemons_controller.rb:34:in `block in create_from_api'
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/pokemons_controller.rb:34:in `block in create_from_api'
+  Rendering layout layouts/application.html.erb
+  Rendering pokemons/index.html.erb within layouts/application
+  [1m[36mPokemon Load (0.7ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons" LIMIT $1 OFFSET $2[0m  [["LIMIT", 6], ["OFFSET", 12]]
+  ↳ app/views/pokemons/index.html.erb:9:in `each_with_index'
+  [1m[35m (7.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "pokemons"[0m
+  ↳ app/views/pokemons/index.html.erb:27
+  Rendered pokemons/index.html.erb within layouts/application (Duration: 24.7ms | Allocations: 8848)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 689.2ms | Allocations: 32322)
+Completed 200 OK in 1600ms (Views: 683.7ms | ActiveRecord: 139.8ms | Allocations: 272262)
+
+
+Started GET "/pokemons/1839" for 127.0.0.1 at 2023-01-27 19:58:46 -0300
+Processing by PokemonsController#show as HTML
+  Parameters: {"id"=>"1839"}
+  [1m[36mPokemon Load (1.3ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons" WHERE "pokemons"."id" = $1 LIMIT $2[0m  [["id", 1839], ["LIMIT", 1]]
+  ↳ app/controllers/pokemons_controller.rb:14:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering pokemons/show.html.erb within layouts/application
+  Rendered pokemons/show.html.erb within layouts/application (Duration: 4.2ms | Allocations: 2406)
+  Rendered layout layouts/application.html.erb (Duration: 4.5ms | Allocations: 2479)
+Completed 500 Internal Server Error in 20ms (ActiveRecord: 1.3ms | Allocations: 4191)
+
+
+  
+ActionView::Template::Error (undefined method `name' for "shed-skin":String):
+    15:       <li class="list-group-item"><strong>Abilities: </strong>
+    16:         <ul>
+    17:           <% @pokemon.abilities.each do |ability| %>
+    18:             <li><%= ability.name %></li>
+    19:           <% end %>
+    20:         </ul>
+    21:       </li>
+  
+app/views/pokemons/show.html.erb:18
+app/views/pokemons/show.html.erb:17:in `each'
+app/views/pokemons/show.html.erb:17
+Started GET "/pokemons/1839" for 127.0.0.1 at 2023-01-27 19:59:35 -0300
+Processing by PokemonsController#show as HTML
+  Parameters: {"id"=>"1839"}
+  [1m[36mPokemon Load (2.1ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons" WHERE "pokemons"."id" = $1 LIMIT $2[0m  [["id", 1839], ["LIMIT", 1]]
+  ↳ app/controllers/pokemons_controller.rb:14:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering pokemons/show.html.erb within layouts/application
+  Rendered pokemons/show.html.erb within layouts/application (Duration: 30.6ms | Allocations: 4433)
+  Rendered layout layouts/application.html.erb (Duration: 30.9ms | Allocations: 4511)
+Completed 500 Internal Server Error in 49ms (ActiveRecord: 2.1ms | Allocations: 6628)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `abilities' for #<ActionView::Base:0x00000000028ca8>
+Did you mean?  @abilities
+               ability):
+    15:       <li class="list-group-item"><strong>Abilities: </strong>
+    16:         <ul>
+    17:           <% @pokemon.abilities.each do |ability| %>
+    18:             <li><%= abilities.name %></li>
+    19:           <% end %>
+    20:         </ul>
+    21:       </li>
+  
+app/views/pokemons/show.html.erb:18
+app/views/pokemons/show.html.erb:17:in `each'
+app/views/pokemons/show.html.erb:17
+Started GET "/pokemons/1839" for 127.0.0.1 at 2023-01-27 20:02:59 -0300
+Processing by PokemonsController#show as HTML
+  Parameters: {"id"=>"1839"}
+  [1m[36mPokemon Load (0.7ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons" WHERE "pokemons"."id" = $1 LIMIT $2[0m  [["id", 1839], ["LIMIT", 1]]
+  ↳ app/controllers/pokemons_controller.rb:14:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering pokemons/show.html.erb within layouts/application
+  Rendered pokemons/show.html.erb within layouts/application (Duration: 4.0ms | Allocations: 2394)
+  Rendered layout layouts/application.html.erb (Duration: 4.3ms | Allocations: 2472)
+Completed 500 Internal Server Error in 18ms (ActiveRecord: 0.7ms | Allocations: 4749)
+
+
+  
+ActionView::Template::Error (undefined method `name' for "shed-skin":String):
+    15:       <li class="list-group-item"><strong>Abilities: </strong>
+    16:         <ul>
+    17:           <% @pokemon.abilities.each do |ability| %>
+    18:             <li><%= ability.name %></li>
+    19:           <% end %>
+    20:         </ul>
+    21:       </li>
+  
+app/views/pokemons/show.html.erb:18
+app/views/pokemons/show.html.erb:17:in `each'
+app/views/pokemons/show.html.erb:17
+  [1m[36mPokemon Load (7.8ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons" ORDER BY "pokemons"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+Started GET "/pokemons/1839" for 127.0.0.1 at 2023-01-27 20:05:28 -0300
+Processing by PokemonsController#show as HTML
+  Parameters: {"id"=>"1839"}
+  [1m[36mPokemon Load (2.3ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons" WHERE "pokemons"."id" = $1 LIMIT $2[0m  [["id", 1839], ["LIMIT", 1]]
+  ↳ app/controllers/pokemons_controller.rb:14:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering pokemons/show.html.erb within layouts/application
+  Rendered pokemons/show.html.erb within layouts/application (Duration: 4.1ms | Allocations: 2398)
+  Rendered layout layouts/application.html.erb (Duration: 4.3ms | Allocations: 2476)
+Completed 500 Internal Server Error in 25ms (ActiveRecord: 2.3ms | Allocations: 4753)
+
+
+  
+ActionView::Template::Error (undefined method `name' for "shed-skin":String):
+    15:       <li class="list-group-item"><strong>Abilities: </strong>
+    16:         <ul>
+    17:           <% @pokemon.abilities.each do |ability| %>
+    18:             <%= ability.name %>
+    19:           <% end %>
+    20:         </ul>
+    21:       </li>
+  
+app/views/pokemons/show.html.erb:18
+app/views/pokemons/show.html.erb:17:in `each'
+app/views/pokemons/show.html.erb:17
+Started GET "/pokemons/1839" for 127.0.0.1 at 2023-01-27 20:05:29 -0300
+Processing by PokemonsController#show as HTML
+  Parameters: {"id"=>"1839"}
+  [1m[36mPokemon Load (0.9ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons" WHERE "pokemons"."id" = $1 LIMIT $2[0m  [["id", 1839], ["LIMIT", 1]]
+  ↳ app/controllers/pokemons_controller.rb:14:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering pokemons/show.html.erb within layouts/application
+  Rendered pokemons/show.html.erb within layouts/application (Duration: 2.6ms | Allocations: 2115)
+  Rendered layout layouts/application.html.erb (Duration: 2.8ms | Allocations: 2187)
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.9ms | Allocations: 3500)
+
+
+  
+ActionView::Template::Error (undefined method `name' for "shed-skin":String):
+    15:       <li class="list-group-item"><strong>Abilities: </strong>
+    16:         <ul>
+    17:           <% @pokemon.abilities.each do |ability| %>
+    18:             <%= ability.name %>
+    19:           <% end %>
+    20:         </ul>
+    21:       </li>
+  
+app/views/pokemons/show.html.erb:18
+app/views/pokemons/show.html.erb:17:in `each'
+app/views/pokemons/show.html.erb:17
+Started GET "/pokemons/1839" for 127.0.0.1 at 2023-01-27 20:05:29 -0300
+Processing by PokemonsController#show as HTML
+  Parameters: {"id"=>"1839"}
+  [1m[36mPokemon Load (0.9ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons" WHERE "pokemons"."id" = $1 LIMIT $2[0m  [["id", 1839], ["LIMIT", 1]]
+  ↳ app/controllers/pokemons_controller.rb:14:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering pokemons/show.html.erb within layouts/application
+  Rendered pokemons/show.html.erb within layouts/application (Duration: 1.1ms | Allocations: 2115)
+  Rendered layout layouts/application.html.erb (Duration: 1.2ms | Allocations: 2187)
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.9ms | Allocations: 3339)
+
+
+  
+ActionView::Template::Error (undefined method `name' for "shed-skin":String):
+    15:       <li class="list-group-item"><strong>Abilities: </strong>
+    16:         <ul>
+    17:           <% @pokemon.abilities.each do |ability| %>
+    18:             <%= ability.name %>
+    19:           <% end %>
+    20:         </ul>
+    21:       </li>
+  
+app/views/pokemons/show.html.erb:18
+app/views/pokemons/show.html.erb:17:in `each'
+app/views/pokemons/show.html.erb:17
+Started GET "/pokemons/1839" for 127.0.0.1 at 2023-01-27 20:05:30 -0300
+Processing by PokemonsController#show as HTML
+  Parameters: {"id"=>"1839"}
+  [1m[36mPokemon Load (1.1ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons" WHERE "pokemons"."id" = $1 LIMIT $2[0m  [["id", 1839], ["LIMIT", 1]]
+  ↳ app/controllers/pokemons_controller.rb:14:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering pokemons/show.html.erb within layouts/application
+  Rendered pokemons/show.html.erb within layouts/application (Duration: 1.3ms | Allocations: 2115)
+  Rendered layout layouts/application.html.erb (Duration: 1.4ms | Allocations: 2187)
+Completed 500 Internal Server Error in 62ms (ActiveRecord: 30.7ms | Allocations: 14007)
+
+
+  
+ActionView::Template::Error (undefined method `name' for "shed-skin":String):
+    15:       <li class="list-group-item"><strong>Abilities: </strong>
+    16:         <ul>
+    17:           <% @pokemon.abilities.each do |ability| %>
+    18:             <%= ability.name %>
+    19:           <% end %>
+    20:         </ul>
+    21:       </li>
+  
+app/views/pokemons/show.html.erb:18
+app/views/pokemons/show.html.erb:17:in `each'
+app/views/pokemons/show.html.erb:17
+Started GET "/pokemons/1839" for 127.0.0.1 at 2023-01-27 20:11:32 -0300
+Processing by PokemonsController#show as HTML
+  Parameters: {"id"=>"1839"}
+  [1m[36mPokemon Load (1.3ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons" WHERE "pokemons"."id" = $1 LIMIT $2[0m  [["id", 1839], ["LIMIT", 1]]
+  ↳ app/controllers/pokemons_controller.rb:14:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering pokemons/show.html.erb within layouts/application
+  Rendered pokemons/show.html.erb within layouts/application (Duration: 2.3ms | Allocations: 449)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 41.3ms | Allocations: 7713)
+Completed 200 OK in 144ms (Views: 47.0ms | ActiveRecord: 38.0ms | Allocations: 14819)
+
+
+Started GET "/?page=3" for 127.0.0.1 at 2023-01-27 20:11:35 -0300
+Processing by PokemonsController#index as HTML
+  Parameters: {"page"=>"3"}
+  [1m[36mPokemon Load (1.8ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons" WHERE "pokemons"."name" = $1 LIMIT $2[0m  [["name", "bulbasaur"], ["LIMIT", 1]]
+  ↳ app/controllers/pokemons_controller.rb:23:in `block in create_from_api'
+  [1m[36mPokemon Load (0.7ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons" WHERE "pokemons"."name" = $1 LIMIT $2[0m  [["name", "ivysaur"], ["LIMIT", 1]]
+  ↳ app/controllers/pokemons_controller.rb:23:in `block in create_from_api'
+  [1m[36mPokemon Load (2.4ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons" WHERE "pokemons"."name" = $1 LIMIT $2[0m  [["name", "venusaur"], ["LIMIT", 1]]
+  ↳ app/controllers/pokemons_controller.rb:23:in `block in create_from_api'
+  [1m[36mPokemon Load (1.1ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons" WHERE "pokemons"."name" = $1 LIMIT $2[0m  [["name", "charmander"], ["LIMIT", 1]]
+  ↳ app/controllers/pokemons_controller.rb:23:in `block in create_from_api'
+  [1m[36mPokemon Load (1.0ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons" WHERE "pokemons"."name" = $1 LIMIT $2[0m  [["name", "charmeleon"], ["LIMIT", 1]]
+  ↳ app/controllers/pokemons_controller.rb:23:in `block in create_from_api'
+  [1m[36mPokemon Load (1.0ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons" WHERE "pokemons"."name" = $1 LIMIT $2[0m  [["name", "charizard"], ["LIMIT", 1]]
+  ↳ app/controllers/pokemons_controller.rb:23:in `block in create_from_api'
+  [1m[36mPokemon Load (0.8ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons" WHERE "pokemons"."name" = $1 LIMIT $2[0m  [["name", "squirtle"], ["LIMIT", 1]]
+  ↳ app/controllers/pokemons_controller.rb:23:in `block in create_from_api'
+  [1m[36mPokemon Load (1.4ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons" WHERE "pokemons"."name" = $1 LIMIT $2[0m  [["name", "wartortle"], ["LIMIT", 1]]
+  ↳ app/controllers/pokemons_controller.rb:23:in `block in create_from_api'
+  [1m[36mPokemon Load (0.6ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons" WHERE "pokemons"."name" = $1 LIMIT $2[0m  [["name", "blastoise"], ["LIMIT", 1]]
+  ↳ app/controllers/pokemons_controller.rb:23:in `block in create_from_api'
+  [1m[36mPokemon Load (1.1ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons" WHERE "pokemons"."name" = $1 LIMIT $2[0m  [["name", "caterpie"], ["LIMIT", 1]]
+  ↳ app/controllers/pokemons_controller.rb:23:in `block in create_from_api'
+  [1m[36mPokemon Load (0.4ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons" WHERE "pokemons"."name" = $1 LIMIT $2[0m  [["name", "metapod"], ["LIMIT", 1]]
+  ↳ app/controllers/pokemons_controller.rb:23:in `block in create_from_api'
+  [1m[36mPokemon Load (0.4ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons" WHERE "pokemons"."name" = $1 LIMIT $2[0m  [["name", "butterfree"], ["LIMIT", 1]]
+  ↳ app/controllers/pokemons_controller.rb:23:in `block in create_from_api'
+  [1m[36mPokemon Load (1.1ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons" WHERE "pokemons"."name" = $1 LIMIT $2[0m  [["name", "weedle"], ["LIMIT", 1]]
+  ↳ app/controllers/pokemons_controller.rb:23:in `block in create_from_api'
+  [1m[36mPokemon Load (0.4ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons" WHERE "pokemons"."name" = $1 LIMIT $2[0m  [["name", "kakuna"], ["LIMIT", 1]]
+  ↳ app/controllers/pokemons_controller.rb:23:in `block in create_from_api'
+  [1m[36mPokemon Load (0.4ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons" WHERE "pokemons"."name" = $1 LIMIT $2[0m  [["name", "beedrill"], ["LIMIT", 1]]
+  ↳ app/controllers/pokemons_controller.rb:23:in `block in create_from_api'
+  [1m[36mPokemon Load (0.4ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons" WHERE "pokemons"."name" = $1 LIMIT $2[0m  [["name", "pidgey"], ["LIMIT", 1]]
+  ↳ app/controllers/pokemons_controller.rb:23:in `block in create_from_api'
+  [1m[36mPokemon Load (0.9ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons" WHERE "pokemons"."name" = $1 LIMIT $2[0m  [["name", "pidgeotto"], ["LIMIT", 1]]
+  ↳ app/controllers/pokemons_controller.rb:23:in `block in create_from_api'
+  [1m[36mPokemon Load (0.4ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons" WHERE "pokemons"."name" = $1 LIMIT $2[0m  [["name", "pidgeot"], ["LIMIT", 1]]
+  ↳ app/controllers/pokemons_controller.rb:23:in `block in create_from_api'
+  [1m[36mPokemon Load (0.4ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons" WHERE "pokemons"."name" = $1 LIMIT $2[0m  [["name", "rattata"], ["LIMIT", 1]]
+  ↳ app/controllers/pokemons_controller.rb:23:in `block in create_from_api'
+  [1m[36mPokemon Load (0.4ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons" WHERE "pokemons"."name" = $1 LIMIT $2[0m  [["name", "raticate"], ["LIMIT", 1]]
+  ↳ app/controllers/pokemons_controller.rb:23:in `block in create_from_api'
+  Rendering layout layouts/application.html.erb
+  Rendering pokemons/index.html.erb within layouts/application
+  [1m[36mPokemon Load (1.1ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons" LIMIT $1 OFFSET $2[0m  [["LIMIT", 6], ["OFFSET", 12]]
+  ↳ app/views/pokemons/index.html.erb:9:in `each_with_index'
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT COUNT(*) FROM "pokemons"[0m
+  ↳ app/views/pokemons/index.html.erb:27
+  Rendered pokemons/index.html.erb within layouts/application (Duration: 23.9ms | Allocations: 6913)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 40.8ms | Allocations: 13688)
+Completed 200 OK in 262ms (Views: 39.1ms | ActiveRecord: 18.8ms | Allocations: 30361)
+
+
+Started GET "/pokemons/1839" for 127.0.0.1 at 2023-01-27 20:11:37 -0300
+Processing by PokemonsController#show as HTML
+  Parameters: {"id"=>"1839"}
+  [1m[36mPokemon Load (0.8ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons" WHERE "pokemons"."id" = $1 LIMIT $2[0m  [["id", 1839], ["LIMIT", 1]]
+  ↳ app/controllers/pokemons_controller.rb:14:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering pokemons/show.html.erb within layouts/application
+  Rendered pokemons/show.html.erb within layouts/application (Duration: 0.3ms | Allocations: 123)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 15.7ms | Allocations: 6889)
+Completed 200 OK in 21ms (Views: 16.4ms | ActiveRecord: 0.8ms | Allocations: 8084)
+
+
+Started GET "/?page=3" for 127.0.0.1 at 2023-01-27 20:12:47 -0300
+Processing by PokemonsController#index as HTML
+  Parameters: {"page"=>"3"}
+  [1m[36mPokemon Load (1.4ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons" WHERE "pokemons"."name" = $1 LIMIT $2[0m  [["name", "bulbasaur"], ["LIMIT", 1]]
+  ↳ app/controllers/pokemons_controller.rb:23:in `block in create_from_api'
+  [1m[36mPokemon Load (0.3ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons" WHERE "pokemons"."name" = $1 LIMIT $2[0m  [["name", "ivysaur"], ["LIMIT", 1]]
+  ↳ app/controllers/pokemons_controller.rb:23:in `block in create_from_api'
+  [1m[36mPokemon Load (0.3ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons" WHERE "pokemons"."name" = $1 LIMIT $2[0m  [["name", "venusaur"], ["LIMIT", 1]]
+  ↳ app/controllers/pokemons_controller.rb:23:in `block in create_from_api'
+  [1m[36mPokemon Load (0.3ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons" WHERE "pokemons"."name" = $1 LIMIT $2[0m  [["name", "charmander"], ["LIMIT", 1]]
+  ↳ app/controllers/pokemons_controller.rb:23:in `block in create_from_api'
+  [1m[36mPokemon Load (0.3ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons" WHERE "pokemons"."name" = $1 LIMIT $2[0m  [["name", "charmeleon"], ["LIMIT", 1]]
+  ↳ app/controllers/pokemons_controller.rb:23:in `block in create_from_api'
+  [1m[36mPokemon Load (0.3ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons" WHERE "pokemons"."name" = $1 LIMIT $2[0m  [["name", "charizard"], ["LIMIT", 1]]
+  ↳ app/controllers/pokemons_controller.rb:23:in `block in create_from_api'
+  [1m[36mPokemon Load (0.3ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons" WHERE "pokemons"."name" = $1 LIMIT $2[0m  [["name", "squirtle"], ["LIMIT", 1]]
+  ↳ app/controllers/pokemons_controller.rb:23:in `block in create_from_api'
+  [1m[36mPokemon Load (1.8ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons" WHERE "pokemons"."name" = $1 LIMIT $2[0m  [["name", "wartortle"], ["LIMIT", 1]]
+  ↳ app/controllers/pokemons_controller.rb:23:in `block in create_from_api'
+  [1m[36mPokemon Load (0.4ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons" WHERE "pokemons"."name" = $1 LIMIT $2[0m  [["name", "blastoise"], ["LIMIT", 1]]
+  ↳ app/controllers/pokemons_controller.rb:23:in `block in create_from_api'
+  [1m[36mPokemon Load (0.3ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons" WHERE "pokemons"."name" = $1 LIMIT $2[0m  [["name", "caterpie"], ["LIMIT", 1]]
+  ↳ app/controllers/pokemons_controller.rb:23:in `block in create_from_api'
+  [1m[36mPokemon Load (0.3ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons" WHERE "pokemons"."name" = $1 LIMIT $2[0m  [["name", "metapod"], ["LIMIT", 1]]
+  ↳ app/controllers/pokemons_controller.rb:23:in `block in create_from_api'
+  [1m[36mPokemon Load (0.3ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons" WHERE "pokemons"."name" = $1 LIMIT $2[0m  [["name", "butterfree"], ["LIMIT", 1]]
+  ↳ app/controllers/pokemons_controller.rb:23:in `block in create_from_api'
+  [1m[36mPokemon Load (0.3ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons" WHERE "pokemons"."name" = $1 LIMIT $2[0m  [["name", "weedle"], ["LIMIT", 1]]
+  ↳ app/controllers/pokemons_controller.rb:23:in `block in create_from_api'
+  [1m[36mPokemon Load (0.3ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons" WHERE "pokemons"."name" = $1 LIMIT $2[0m  [["name", "kakuna"], ["LIMIT", 1]]
+  ↳ app/controllers/pokemons_controller.rb:23:in `block in create_from_api'
+  [1m[36mPokemon Load (0.3ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons" WHERE "pokemons"."name" = $1 LIMIT $2[0m  [["name", "beedrill"], ["LIMIT", 1]]
+  ↳ app/controllers/pokemons_controller.rb:23:in `block in create_from_api'
+  [1m[36mPokemon Load (0.3ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons" WHERE "pokemons"."name" = $1 LIMIT $2[0m  [["name", "pidgey"], ["LIMIT", 1]]
+  ↳ app/controllers/pokemons_controller.rb:23:in `block in create_from_api'
+  [1m[36mPokemon Load (0.3ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons" WHERE "pokemons"."name" = $1 LIMIT $2[0m  [["name", "pidgeotto"], ["LIMIT", 1]]
+  ↳ app/controllers/pokemons_controller.rb:23:in `block in create_from_api'
+  [1m[36mPokemon Load (0.3ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons" WHERE "pokemons"."name" = $1 LIMIT $2[0m  [["name", "pidgeot"], ["LIMIT", 1]]
+  ↳ app/controllers/pokemons_controller.rb:23:in `block in create_from_api'
+  [1m[36mPokemon Load (0.7ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons" WHERE "pokemons"."name" = $1 LIMIT $2[0m  [["name", "rattata"], ["LIMIT", 1]]
+  ↳ app/controllers/pokemons_controller.rb:23:in `block in create_from_api'
+  [1m[36mPokemon Load (0.6ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons" WHERE "pokemons"."name" = $1 LIMIT $2[0m  [["name", "raticate"], ["LIMIT", 1]]
+  ↳ app/controllers/pokemons_controller.rb:23:in `block in create_from_api'
+  Rendering layout layouts/application.html.erb
+  Rendering pokemons/index.html.erb within layouts/application
+  [1m[36mPokemon Load (0.8ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons" LIMIT $1 OFFSET $2[0m  [["LIMIT", 6], ["OFFSET", 12]]
+  ↳ app/views/pokemons/index.html.erb:9:in `each_with_index'
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "pokemons"[0m
+  ↳ app/views/pokemons/index.html.erb:27
+  Rendered pokemons/index.html.erb within layouts/application (Duration: 10.5ms | Allocations: 7118)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 22.9ms | Allocations: 14282)
+Completed 200 OK in 119ms (Views: 24.1ms | ActiveRecord: 11.6ms | Allocations: 31483)
+
+
+Started GET "/pokemons/1839" for 127.0.0.1 at 2023-01-27 20:12:48 -0300
+Processing by PokemonsController#show as HTML
+  Parameters: {"id"=>"1839"}
+  [1m[36mPokemon Load (0.8ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons" WHERE "pokemons"."id" = $1 LIMIT $2[0m  [["id", 1839], ["LIMIT", 1]]
+  ↳ app/controllers/pokemons_controller.rb:14:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering pokemons/show.html.erb within layouts/application
+  Rendered pokemons/show.html.erb within layouts/application (Duration: 1.1ms | Allocations: 343)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 19.7ms | Allocations: 7109)
+Completed 200 OK in 26ms (Views: 20.2ms | ActiveRecord: 0.8ms | Allocations: 8498)
+
+
+Started GET "/?page=3" for 127.0.0.1 at 2023-01-27 20:12:49 -0300
+Processing by PokemonsController#index as HTML
+  Parameters: {"page"=>"3"}
+  [1m[36mPokemon Load (0.7ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons" WHERE "pokemons"."name" = $1 LIMIT $2[0m  [["name", "bulbasaur"], ["LIMIT", 1]]
+  ↳ app/controllers/pokemons_controller.rb:23:in `block in create_from_api'
+  [1m[36mPokemon Load (1.1ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons" WHERE "pokemons"."name" = $1 LIMIT $2[0m  [["name", "ivysaur"], ["LIMIT", 1]]
+  ↳ app/controllers/pokemons_controller.rb:23:in `block in create_from_api'
+  [1m[36mPokemon Load (1.0ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons" WHERE "pokemons"."name" = $1 LIMIT $2[0m  [["name", "venusaur"], ["LIMIT", 1]]
+  ↳ app/controllers/pokemons_controller.rb:23:in `block in create_from_api'
+  [1m[36mPokemon Load (0.9ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons" WHERE "pokemons"."name" = $1 LIMIT $2[0m  [["name", "charmander"], ["LIMIT", 1]]
+  ↳ app/controllers/pokemons_controller.rb:23:in `block in create_from_api'
+  [1m[36mPokemon Load (0.7ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons" WHERE "pokemons"."name" = $1 LIMIT $2[0m  [["name", "charmeleon"], ["LIMIT", 1]]
+  ↳ app/controllers/pokemons_controller.rb:23:in `block in create_from_api'
+  [1m[36mPokemon Load (0.6ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons" WHERE "pokemons"."name" = $1 LIMIT $2[0m  [["name", "charizard"], ["LIMIT", 1]]
+  ↳ app/controllers/pokemons_controller.rb:23:in `block in create_from_api'
+  [1m[36mPokemon Load (0.5ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons" WHERE "pokemons"."name" = $1 LIMIT $2[0m  [["name", "squirtle"], ["LIMIT", 1]]
+  ↳ app/controllers/pokemons_controller.rb:23:in `block in create_from_api'
+  [1m[36mPokemon Load (0.5ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons" WHERE "pokemons"."name" = $1 LIMIT $2[0m  [["name", "wartortle"], ["LIMIT", 1]]
+  ↳ app/controllers/pokemons_controller.rb:23:in `block in create_from_api'
+  [1m[36mPokemon Load (0.5ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons" WHERE "pokemons"."name" = $1 LIMIT $2[0m  [["name", "blastoise"], ["LIMIT", 1]]
+  ↳ app/controllers/pokemons_controller.rb:23:in `block in create_from_api'
+  [1m[36mPokemon Load (0.5ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons" WHERE "pokemons"."name" = $1 LIMIT $2[0m  [["name", "caterpie"], ["LIMIT", 1]]
+  ↳ app/controllers/pokemons_controller.rb:23:in `block in create_from_api'
+  [1m[36mPokemon Load (0.5ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons" WHERE "pokemons"."name" = $1 LIMIT $2[0m  [["name", "metapod"], ["LIMIT", 1]]
+  ↳ app/controllers/pokemons_controller.rb:23:in `block in create_from_api'
+  [1m[36mPokemon Load (0.6ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons" WHERE "pokemons"."name" = $1 LIMIT $2[0m  [["name", "butterfree"], ["LIMIT", 1]]
+  ↳ app/controllers/pokemons_controller.rb:23:in `block in create_from_api'
+  [1m[36mPokemon Load (0.5ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons" WHERE "pokemons"."name" = $1 LIMIT $2[0m  [["name", "weedle"], ["LIMIT", 1]]
+  ↳ app/controllers/pokemons_controller.rb:23:in `block in create_from_api'
+  [1m[36mPokemon Load (0.4ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons" WHERE "pokemons"."name" = $1 LIMIT $2[0m  [["name", "kakuna"], ["LIMIT", 1]]
+  ↳ app/controllers/pokemons_controller.rb:23:in `block in create_from_api'
+  [1m[36mPokemon Load (0.4ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons" WHERE "pokemons"."name" = $1 LIMIT $2[0m  [["name", "beedrill"], ["LIMIT", 1]]
+  ↳ app/controllers/pokemons_controller.rb:23:in `block in create_from_api'
+  [1m[36mPokemon Load (0.4ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons" WHERE "pokemons"."name" = $1 LIMIT $2[0m  [["name", "pidgey"], ["LIMIT", 1]]
+  ↳ app/controllers/pokemons_controller.rb:23:in `block in create_from_api'
+  [1m[36mPokemon Load (0.4ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons" WHERE "pokemons"."name" = $1 LIMIT $2[0m  [["name", "pidgeotto"], ["LIMIT", 1]]
+  ↳ app/controllers/pokemons_controller.rb:23:in `block in create_from_api'
+  [1m[36mPokemon Load (0.4ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons" WHERE "pokemons"."name" = $1 LIMIT $2[0m  [["name", "pidgeot"], ["LIMIT", 1]]
+  ↳ app/controllers/pokemons_controller.rb:23:in `block in create_from_api'
+  [1m[36mPokemon Load (0.4ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons" WHERE "pokemons"."name" = $1 LIMIT $2[0m  [["name", "rattata"], ["LIMIT", 1]]
+  ↳ app/controllers/pokemons_controller.rb:23:in `block in create_from_api'
+  [1m[36mPokemon Load (0.4ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons" WHERE "pokemons"."name" = $1 LIMIT $2[0m  [["name", "raticate"], ["LIMIT", 1]]
+  ↳ app/controllers/pokemons_controller.rb:23:in `block in create_from_api'
+  Rendering layout layouts/application.html.erb
+  Rendering pokemons/index.html.erb within layouts/application
+  [1m[36mPokemon Load (0.6ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons" LIMIT $1 OFFSET $2[0m  [["LIMIT", 6], ["OFFSET", 12]]
+  ↳ app/views/pokemons/index.html.erb:9:in `each_with_index'
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT COUNT(*) FROM "pokemons"[0m
+  ↳ app/views/pokemons/index.html.erb:27
+  Rendered pokemons/index.html.erb within layouts/application (Duration: 4.2ms | Allocations: 4236)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 11.0ms | Allocations: 11011)
+Completed 200 OK in 91ms (Views: 10.1ms | ActiveRecord: 12.7ms | Allocations: 27443)
+
+
+Started GET "/pokemons/1840" for 127.0.0.1 at 2023-01-27 20:12:50 -0300
+Processing by PokemonsController#show as HTML
+  Parameters: {"id"=>"1840"}
+  [1m[36mPokemon Load (0.8ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons" WHERE "pokemons"."id" = $1 LIMIT $2[0m  [["id", 1840], ["LIMIT", 1]]
+  ↳ app/controllers/pokemons_controller.rb:14:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering pokemons/show.html.erb within layouts/application
+  Rendered pokemons/show.html.erb within layouts/application (Duration: 0.6ms | Allocations: 124)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 15.9ms | Allocations: 7511)
+Completed 200 OK in 21ms (Views: 16.6ms | ActiveRecord: 0.8ms | Allocations: 8700)
+
+
+Started GET "/?page=3" for 127.0.0.1 at 2023-01-27 20:12:52 -0300
+Processing by PokemonsController#index as HTML
+  Parameters: {"page"=>"3"}
+  [1m[36mPokemon Load (0.9ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons" WHERE "pokemons"."name" = $1 LIMIT $2[0m  [["name", "bulbasaur"], ["LIMIT", 1]]
+  ↳ app/controllers/pokemons_controller.rb:23:in `block in create_from_api'
+  [1m[36mPokemon Load (0.8ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons" WHERE "pokemons"."name" = $1 LIMIT $2[0m  [["name", "ivysaur"], ["LIMIT", 1]]
+  ↳ app/controllers/pokemons_controller.rb:23:in `block in create_from_api'
+  [1m[36mPokemon Load (1.0ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons" WHERE "pokemons"."name" = $1 LIMIT $2[0m  [["name", "venusaur"], ["LIMIT", 1]]
+  ↳ app/controllers/pokemons_controller.rb:23:in `block in create_from_api'
+  [1m[36mPokemon Load (1.4ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons" WHERE "pokemons"."name" = $1 LIMIT $2[0m  [["name", "charmander"], ["LIMIT", 1]]
+  ↳ app/controllers/pokemons_controller.rb:23:in `block in create_from_api'
+  [1m[36mPokemon Load (0.7ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons" WHERE "pokemons"."name" = $1 LIMIT $2[0m  [["name", "charmeleon"], ["LIMIT", 1]]
+  ↳ app/controllers/pokemons_controller.rb:23:in `block in create_from_api'
+  [1m[36mPokemon Load (0.4ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons" WHERE "pokemons"."name" = $1 LIMIT $2[0m  [["name", "charizard"], ["LIMIT", 1]]
+  ↳ app/controllers/pokemons_controller.rb:23:in `block in create_from_api'
+  [1m[36mPokemon Load (0.4ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons" WHERE "pokemons"."name" = $1 LIMIT $2[0m  [["name", "squirtle"], ["LIMIT", 1]]
+  ↳ app/controllers/pokemons_controller.rb:23:in `block in create_from_api'
+  [1m[36mPokemon Load (0.5ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons" WHERE "pokemons"."name" = $1 LIMIT $2[0m  [["name", "wartortle"], ["LIMIT", 1]]
+  ↳ app/controllers/pokemons_controller.rb:23:in `block in create_from_api'
+  [1m[36mPokemon Load (0.5ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons" WHERE "pokemons"."name" = $1 LIMIT $2[0m  [["name", "blastoise"], ["LIMIT", 1]]
+  ↳ app/controllers/pokemons_controller.rb:23:in `block in create_from_api'
+  [1m[36mPokemon Load (0.5ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons" WHERE "pokemons"."name" = $1 LIMIT $2[0m  [["name", "caterpie"], ["LIMIT", 1]]
+  ↳ app/controllers/pokemons_controller.rb:23:in `block in create_from_api'
+  [1m[36mPokemon Load (0.7ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons" WHERE "pokemons"."name" = $1 LIMIT $2[0m  [["name", "metapod"], ["LIMIT", 1]]
+  ↳ app/controllers/pokemons_controller.rb:23:in `block in create_from_api'
+  [1m[36mPokemon Load (0.6ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons" WHERE "pokemons"."name" = $1 LIMIT $2[0m  [["name", "butterfree"], ["LIMIT", 1]]
+  ↳ app/controllers/pokemons_controller.rb:23:in `block in create_from_api'
+  [1m[36mPokemon Load (0.6ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons" WHERE "pokemons"."name" = $1 LIMIT $2[0m  [["name", "weedle"], ["LIMIT", 1]]
+  ↳ app/controllers/pokemons_controller.rb:23:in `block in create_from_api'
+  [1m[36mPokemon Load (1.0ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons" WHERE "pokemons"."name" = $1 LIMIT $2[0m  [["name", "kakuna"], ["LIMIT", 1]]
+  ↳ app/controllers/pokemons_controller.rb:23:in `block in create_from_api'
+  [1m[36mPokemon Load (0.6ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons" WHERE "pokemons"."name" = $1 LIMIT $2[0m  [["name", "beedrill"], ["LIMIT", 1]]
+  ↳ app/controllers/pokemons_controller.rb:23:in `block in create_from_api'
+  [1m[36mPokemon Load (0.4ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons" WHERE "pokemons"."name" = $1 LIMIT $2[0m  [["name", "pidgey"], ["LIMIT", 1]]
+  ↳ app/controllers/pokemons_controller.rb:23:in `block in create_from_api'
+  [1m[36mPokemon Load (0.5ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons" WHERE "pokemons"."name" = $1 LIMIT $2[0m  [["name", "pidgeotto"], ["LIMIT", 1]]
+  ↳ app/controllers/pokemons_controller.rb:23:in `block in create_from_api'
+  [1m[36mPokemon Load (0.6ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons" WHERE "pokemons"."name" = $1 LIMIT $2[0m  [["name", "pidgeot"], ["LIMIT", 1]]
+  ↳ app/controllers/pokemons_controller.rb:23:in `block in create_from_api'
+  [1m[36mPokemon Load (0.6ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons" WHERE "pokemons"."name" = $1 LIMIT $2[0m  [["name", "rattata"], ["LIMIT", 1]]
+  ↳ app/controllers/pokemons_controller.rb:23:in `block in create_from_api'
+  [1m[36mPokemon Load (0.5ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons" WHERE "pokemons"."name" = $1 LIMIT $2[0m  [["name", "raticate"], ["LIMIT", 1]]
+  ↳ app/controllers/pokemons_controller.rb:23:in `block in create_from_api'
+  Rendering layout layouts/application.html.erb
+  Rendering pokemons/index.html.erb within layouts/application
+  [1m[36mPokemon Load (0.8ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons" LIMIT $1 OFFSET $2[0m  [["LIMIT", 6], ["OFFSET", 12]]
+  ↳ app/views/pokemons/index.html.erb:9:in `each_with_index'
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT COUNT(*) FROM "pokemons"[0m
+  ↳ app/views/pokemons/index.html.erb:27
+  Rendered pokemons/index.html.erb within layouts/application (Duration: 5.8ms | Allocations: 4237)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 18.6ms | Allocations: 11100)
+Completed 200 OK in 99ms (Views: 17.3ms | ActiveRecord: 14.8ms | Allocations: 27338)
+
+
+Started GET "/pokemons/1838" for 127.0.0.1 at 2023-01-27 20:12:53 -0300
+Processing by PokemonsController#show as HTML
+  Parameters: {"id"=>"1838"}
+  [1m[36mPokemon Load (0.9ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons" WHERE "pokemons"."id" = $1 LIMIT $2[0m  [["id", 1838], ["LIMIT", 1]]
+  ↳ app/controllers/pokemons_controller.rb:14:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering pokemons/show.html.erb within layouts/application
+  Rendered pokemons/show.html.erb within layouts/application (Duration: 0.4ms | Allocations: 124)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 14.4ms | Allocations: 6890)
+Completed 200 OK in 20ms (Views: 15.0ms | ActiveRecord: 0.9ms | Allocations: 8079)
+
+
+Started GET "/?page=3" for 127.0.0.1 at 2023-01-27 20:12:55 -0300
+Processing by PokemonsController#index as HTML
+  Parameters: {"page"=>"3"}
+  [1m[36mPokemon Load (0.8ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons" WHERE "pokemons"."name" = $1 LIMIT $2[0m  [["name", "bulbasaur"], ["LIMIT", 1]]
+  ↳ app/controllers/pokemons_controller.rb:23:in `block in create_from_api'
+  [1m[36mPokemon Load (0.8ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons" WHERE "pokemons"."name" = $1 LIMIT $2[0m  [["name", "ivysaur"], ["LIMIT", 1]]
+  ↳ app/controllers/pokemons_controller.rb:23:in `block in create_from_api'
+  [1m[36mPokemon Load (0.7ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons" WHERE "pokemons"."name" = $1 LIMIT $2[0m  [["name", "venusaur"], ["LIMIT", 1]]
+  ↳ app/controllers/pokemons_controller.rb:23:in `block in create_from_api'
+  [1m[36mPokemon Load (0.7ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons" WHERE "pokemons"."name" = $1 LIMIT $2[0m  [["name", "charmander"], ["LIMIT", 1]]
+  ↳ app/controllers/pokemons_controller.rb:23:in `block in create_from_api'
+  [1m[36mPokemon Load (0.7ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons" WHERE "pokemons"."name" = $1 LIMIT $2[0m  [["name", "charmeleon"], ["LIMIT", 1]]
+  ↳ app/controllers/pokemons_controller.rb:23:in `block in create_from_api'
+  [1m[36mPokemon Load (0.8ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons" WHERE "pokemons"."name" = $1 LIMIT $2[0m  [["name", "charizard"], ["LIMIT", 1]]
+  ↳ app/controllers/pokemons_controller.rb:23:in `block in create_from_api'
+  [1m[36mPokemon Load (0.5ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons" WHERE "pokemons"."name" = $1 LIMIT $2[0m  [["name", "squirtle"], ["LIMIT", 1]]
+  ↳ app/controllers/pokemons_controller.rb:23:in `block in create_from_api'
+  [1m[36mPokemon Load (0.5ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons" WHERE "pokemons"."name" = $1 LIMIT $2[0m  [["name", "wartortle"], ["LIMIT", 1]]
+  ↳ app/controllers/pokemons_controller.rb:23:in `block in create_from_api'
+  [1m[36mPokemon Load (0.5ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons" WHERE "pokemons"."name" = $1 LIMIT $2[0m  [["name", "blastoise"], ["LIMIT", 1]]
+  ↳ app/controllers/pokemons_controller.rb:23:in `block in create_from_api'
+  [1m[36mPokemon Load (0.7ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons" WHERE "pokemons"."name" = $1 LIMIT $2[0m  [["name", "caterpie"], ["LIMIT", 1]]
+  ↳ app/controllers/pokemons_controller.rb:23:in `block in create_from_api'
+  [1m[36mPokemon Load (0.7ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons" WHERE "pokemons"."name" = $1 LIMIT $2[0m  [["name", "metapod"], ["LIMIT", 1]]
+  ↳ app/controllers/pokemons_controller.rb:23:in `block in create_from_api'
+  [1m[36mPokemon Load (0.7ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons" WHERE "pokemons"."name" = $1 LIMIT $2[0m  [["name", "butterfree"], ["LIMIT", 1]]
+  ↳ app/controllers/pokemons_controller.rb:23:in `block in create_from_api'
+  [1m[36mPokemon Load (0.6ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons" WHERE "pokemons"."name" = $1 LIMIT $2[0m  [["name", "weedle"], ["LIMIT", 1]]
+  ↳ app/controllers/pokemons_controller.rb:23:in `block in create_from_api'
+  [1m[36mPokemon Load (0.6ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons" WHERE "pokemons"."name" = $1 LIMIT $2[0m  [["name", "kakuna"], ["LIMIT", 1]]
+  ↳ app/controllers/pokemons_controller.rb:23:in `block in create_from_api'
+  [1m[36mPokemon Load (0.6ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons" WHERE "pokemons"."name" = $1 LIMIT $2[0m  [["name", "beedrill"], ["LIMIT", 1]]
+  ↳ app/controllers/pokemons_controller.rb:23:in `block in create_from_api'
+  [1m[36mPokemon Load (0.6ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons" WHERE "pokemons"."name" = $1 LIMIT $2[0m  [["name", "pidgey"], ["LIMIT", 1]]
+  ↳ app/controllers/pokemons_controller.rb:23:in `block in create_from_api'
+  [1m[36mPokemon Load (0.6ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons" WHERE "pokemons"."name" = $1 LIMIT $2[0m  [["name", "pidgeotto"], ["LIMIT", 1]]
+  ↳ app/controllers/pokemons_controller.rb:23:in `block in create_from_api'
+  [1m[36mPokemon Load (0.6ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons" WHERE "pokemons"."name" = $1 LIMIT $2[0m  [["name", "pidgeot"], ["LIMIT", 1]]
+  ↳ app/controllers/pokemons_controller.rb:23:in `block in create_from_api'
+  [1m[36mPokemon Load (0.6ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons" WHERE "pokemons"."name" = $1 LIMIT $2[0m  [["name", "rattata"], ["LIMIT", 1]]
+  ↳ app/controllers/pokemons_controller.rb:23:in `block in create_from_api'
+  [1m[36mPokemon Load (0.6ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons" WHERE "pokemons"."name" = $1 LIMIT $2[0m  [["name", "raticate"], ["LIMIT", 1]]
+  ↳ app/controllers/pokemons_controller.rb:23:in `block in create_from_api'
+  Rendering layout layouts/application.html.erb
+  Rendering pokemons/index.html.erb within layouts/application
+  [1m[36mPokemon Load (0.8ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons" LIMIT $1 OFFSET $2[0m  [["LIMIT", 6], ["OFFSET", 12]]
+  ↳ app/views/pokemons/index.html.erb:9:in `each_with_index'
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT COUNT(*) FROM "pokemons"[0m
+  ↳ app/views/pokemons/index.html.erb:27
+  Rendered pokemons/index.html.erb within layouts/application (Duration: 5.7ms | Allocations: 4236)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 15.7ms | Allocations: 11002)
+Completed 200 OK in 106ms (Views: 14.4ms | ActiveRecord: 14.4ms | Allocations: 27234)
+
+
+Started GET "/pokemons/1842" for 127.0.0.1 at 2023-01-27 20:12:57 -0300
+Processing by PokemonsController#show as HTML
+  Parameters: {"id"=>"1842"}
+  [1m[36mPokemon Load (0.8ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons" WHERE "pokemons"."id" = $1 LIMIT $2[0m  [["id", 1842], ["LIMIT", 1]]
+  ↳ app/controllers/pokemons_controller.rb:14:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering pokemons/show.html.erb within layouts/application
+  Rendered pokemons/show.html.erb within layouts/application (Duration: 0.3ms | Allocations: 125)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 30.3ms | Allocations: 7501)
+Completed 200 OK in 34ms (Views: 30.9ms | ActiveRecord: 0.8ms | Allocations: 8693)
+
+
+Started GET "/?page=3" for 127.0.0.1 at 2023-01-27 20:13:01 -0300
+Processing by PokemonsController#index as HTML
+  Parameters: {"page"=>"3"}
+  [1m[36mPokemon Load (0.6ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons" WHERE "pokemons"."name" = $1 LIMIT $2[0m  [["name", "bulbasaur"], ["LIMIT", 1]]
+  ↳ app/controllers/pokemons_controller.rb:23:in `block in create_from_api'
+  [1m[36mPokemon Load (0.5ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons" WHERE "pokemons"."name" = $1 LIMIT $2[0m  [["name", "ivysaur"], ["LIMIT", 1]]
+  ↳ app/controllers/pokemons_controller.rb:23:in `block in create_from_api'
+  [1m[36mPokemon Load (0.4ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons" WHERE "pokemons"."name" = $1 LIMIT $2[0m  [["name", "venusaur"], ["LIMIT", 1]]
+  ↳ app/controllers/pokemons_controller.rb:23:in `block in create_from_api'
+  [1m[36mPokemon Load (0.4ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons" WHERE "pokemons"."name" = $1 LIMIT $2[0m  [["name", "charmander"], ["LIMIT", 1]]
+  ↳ app/controllers/pokemons_controller.rb:23:in `block in create_from_api'
+  [1m[36mPokemon Load (0.4ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons" WHERE "pokemons"."name" = $1 LIMIT $2[0m  [["name", "charmeleon"], ["LIMIT", 1]]
+  ↳ app/controllers/pokemons_controller.rb:23:in `block in create_from_api'
+  [1m[36mPokemon Load (0.4ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons" WHERE "pokemons"."name" = $1 LIMIT $2[0m  [["name", "charizard"], ["LIMIT", 1]]
+  ↳ app/controllers/pokemons_controller.rb:23:in `block in create_from_api'
+  [1m[36mPokemon Load (0.4ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons" WHERE "pokemons"."name" = $1 LIMIT $2[0m  [["name", "squirtle"], ["LIMIT", 1]]
+  ↳ app/controllers/pokemons_controller.rb:23:in `block in create_from_api'
+  [1m[36mPokemon Load (0.4ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons" WHERE "pokemons"."name" = $1 LIMIT $2[0m  [["name", "wartortle"], ["LIMIT", 1]]
+  ↳ app/controllers/pokemons_controller.rb:23:in `block in create_from_api'
+  [1m[36mPokemon Load (0.5ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons" WHERE "pokemons"."name" = $1 LIMIT $2[0m  [["name", "blastoise"], ["LIMIT", 1]]
+  ↳ app/controllers/pokemons_controller.rb:23:in `block in create_from_api'
+  [1m[36mPokemon Load (0.6ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons" WHERE "pokemons"."name" = $1 LIMIT $2[0m  [["name", "caterpie"], ["LIMIT", 1]]
+  ↳ app/controllers/pokemons_controller.rb:23:in `block in create_from_api'
+  [1m[36mPokemon Load (0.4ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons" WHERE "pokemons"."name" = $1 LIMIT $2[0m  [["name", "metapod"], ["LIMIT", 1]]
+  ↳ app/controllers/pokemons_controller.rb:23:in `block in create_from_api'
+  [1m[36mPokemon Load (0.4ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons" WHERE "pokemons"."name" = $1 LIMIT $2[0m  [["name", "butterfree"], ["LIMIT", 1]]
+  ↳ app/controllers/pokemons_controller.rb:23:in `block in create_from_api'
+  [1m[36mPokemon Load (0.4ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons" WHERE "pokemons"."name" = $1 LIMIT $2[0m  [["name", "weedle"], ["LIMIT", 1]]
+  ↳ app/controllers/pokemons_controller.rb:23:in `block in create_from_api'
+  [1m[36mPokemon Load (0.4ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons" WHERE "pokemons"."name" = $1 LIMIT $2[0m  [["name", "kakuna"], ["LIMIT", 1]]
+  ↳ app/controllers/pokemons_controller.rb:23:in `block in create_from_api'
+  [1m[36mPokemon Load (0.4ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons" WHERE "pokemons"."name" = $1 LIMIT $2[0m  [["name", "beedrill"], ["LIMIT", 1]]
+  ↳ app/controllers/pokemons_controller.rb:23:in `block in create_from_api'
+  [1m[36mPokemon Load (0.4ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons" WHERE "pokemons"."name" = $1 LIMIT $2[0m  [["name", "pidgey"], ["LIMIT", 1]]
+  ↳ app/controllers/pokemons_controller.rb:23:in `block in create_from_api'
+  [1m[36mPokemon Load (0.5ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons" WHERE "pokemons"."name" = $1 LIMIT $2[0m  [["name", "pidgeotto"], ["LIMIT", 1]]
+  ↳ app/controllers/pokemons_controller.rb:23:in `block in create_from_api'
+  [1m[36mPokemon Load (0.4ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons" WHERE "pokemons"."name" = $1 LIMIT $2[0m  [["name", "pidgeot"], ["LIMIT", 1]]
+  ↳ app/controllers/pokemons_controller.rb:23:in `block in create_from_api'
+  [1m[36mPokemon Load (0.4ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons" WHERE "pokemons"."name" = $1 LIMIT $2[0m  [["name", "rattata"], ["LIMIT", 1]]
+  ↳ app/controllers/pokemons_controller.rb:23:in `block in create_from_api'
+  [1m[36mPokemon Load (0.4ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons" WHERE "pokemons"."name" = $1 LIMIT $2[0m  [["name", "raticate"], ["LIMIT", 1]]
+  ↳ app/controllers/pokemons_controller.rb:23:in `block in create_from_api'
+  Rendering layout layouts/application.html.erb
+  Rendering pokemons/index.html.erb within layouts/application
+  [1m[36mPokemon Load (0.6ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons" LIMIT $1 OFFSET $2[0m  [["LIMIT", 6], ["OFFSET", 12]]
+  ↳ app/views/pokemons/index.html.erb:9:in `each_with_index'
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "pokemons"[0m
+  ↳ app/views/pokemons/index.html.erb:27
+  Rendered pokemons/index.html.erb within layouts/application (Duration: 4.2ms | Allocations: 4236)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 9.8ms | Allocations: 11096)
+Completed 200 OK in 93ms (Views: 8.9ms | ActiveRecord: 9.9ms | Allocations: 27320)
+
+
+Started GET "/pokemons/1843" for 127.0.0.1 at 2023-01-27 20:13:03 -0300
+Processing by PokemonsController#show as HTML
+  Parameters: {"id"=>"1843"}
+  [1m[36mPokemon Load (0.8ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons" WHERE "pokemons"."id" = $1 LIMIT $2[0m  [["id", 1843], ["LIMIT", 1]]
+  ↳ app/controllers/pokemons_controller.rb:14:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering pokemons/show.html.erb within layouts/application
+  Rendered pokemons/show.html.erb within layouts/application (Duration: 0.4ms | Allocations: 125)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 13.8ms | Allocations: 7415)
+Completed 200 OK in 18ms (Views: 14.3ms | ActiveRecord: 0.8ms | Allocations: 8619)
+
+
+Started GET "/?page=3" for 127.0.0.1 at 2023-01-27 20:13:04 -0300
+Processing by PokemonsController#index as HTML
+  Parameters: {"page"=>"3"}
+  [1m[36mPokemon Load (1.0ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons" WHERE "pokemons"."name" = $1 LIMIT $2[0m  [["name", "bulbasaur"], ["LIMIT", 1]]
+  ↳ app/controllers/pokemons_controller.rb:23:in `block in create_from_api'
+  [1m[36mPokemon Load (0.9ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons" WHERE "pokemons"."name" = $1 LIMIT $2[0m  [["name", "ivysaur"], ["LIMIT", 1]]
+  ↳ app/controllers/pokemons_controller.rb:23:in `block in create_from_api'
+  [1m[36mPokemon Load (1.0ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons" WHERE "pokemons"."name" = $1 LIMIT $2[0m  [["name", "venusaur"], ["LIMIT", 1]]
+  ↳ app/controllers/pokemons_controller.rb:23:in `block in create_from_api'
+  [1m[36mPokemon Load (0.7ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons" WHERE "pokemons"."name" = $1 LIMIT $2[0m  [["name", "charmander"], ["LIMIT", 1]]
+  ↳ app/controllers/pokemons_controller.rb:23:in `block in create_from_api'
+  [1m[36mPokemon Load (0.6ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons" WHERE "pokemons"."name" = $1 LIMIT $2[0m  [["name", "charmeleon"], ["LIMIT", 1]]
+  ↳ app/controllers/pokemons_controller.rb:23:in `block in create_from_api'
+  [1m[36mPokemon Load (0.4ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons" WHERE "pokemons"."name" = $1 LIMIT $2[0m  [["name", "charizard"], ["LIMIT", 1]]
+  ↳ app/controllers/pokemons_controller.rb:23:in `block in create_from_api'
+  [1m[36mPokemon Load (0.4ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons" WHERE "pokemons"."name" = $1 LIMIT $2[0m  [["name", "squirtle"], ["LIMIT", 1]]
+  ↳ app/controllers/pokemons_controller.rb:23:in `block in create_from_api'
+  [1m[36mPokemon Load (0.4ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons" WHERE "pokemons"."name" = $1 LIMIT $2[0m  [["name", "wartortle"], ["LIMIT", 1]]
+  ↳ app/controllers/pokemons_controller.rb:23:in `block in create_from_api'
+  [1m[36mPokemon Load (0.4ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons" WHERE "pokemons"."name" = $1 LIMIT $2[0m  [["name", "blastoise"], ["LIMIT", 1]]
+  ↳ app/controllers/pokemons_controller.rb:23:in `block in create_from_api'
+  [1m[36mPokemon Load (0.3ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons" WHERE "pokemons"."name" = $1 LIMIT $2[0m  [["name", "caterpie"], ["LIMIT", 1]]
+  ↳ app/controllers/pokemons_controller.rb:23:in `block in create_from_api'
+  [1m[36mPokemon Load (0.3ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons" WHERE "pokemons"."name" = $1 LIMIT $2[0m  [["name", "metapod"], ["LIMIT", 1]]
+  ↳ app/controllers/pokemons_controller.rb:23:in `block in create_from_api'
+  [1m[36mPokemon Load (0.3ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons" WHERE "pokemons"."name" = $1 LIMIT $2[0m  [["name", "butterfree"], ["LIMIT", 1]]
+  ↳ app/controllers/pokemons_controller.rb:23:in `block in create_from_api'
+  [1m[36mPokemon Load (0.5ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons" WHERE "pokemons"."name" = $1 LIMIT $2[0m  [["name", "weedle"], ["LIMIT", 1]]
+  ↳ app/controllers/pokemons_controller.rb:23:in `block in create_from_api'
+  [1m[36mPokemon Load (0.3ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons" WHERE "pokemons"."name" = $1 LIMIT $2[0m  [["name", "kakuna"], ["LIMIT", 1]]
+  ↳ app/controllers/pokemons_controller.rb:23:in `block in create_from_api'
+  [1m[36mPokemon Load (0.3ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons" WHERE "pokemons"."name" = $1 LIMIT $2[0m  [["name", "beedrill"], ["LIMIT", 1]]
+  ↳ app/controllers/pokemons_controller.rb:23:in `block in create_from_api'
+  [1m[36mPokemon Load (0.7ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons" WHERE "pokemons"."name" = $1 LIMIT $2[0m  [["name", "pidgey"], ["LIMIT", 1]]
+  ↳ app/controllers/pokemons_controller.rb:23:in `block in create_from_api'
+  [1m[36mPokemon Load (0.8ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons" WHERE "pokemons"."name" = $1 LIMIT $2[0m  [["name", "pidgeotto"], ["LIMIT", 1]]
+  ↳ app/controllers/pokemons_controller.rb:23:in `block in create_from_api'
+  [1m[36mPokemon Load (0.7ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons" WHERE "pokemons"."name" = $1 LIMIT $2[0m  [["name", "pidgeot"], ["LIMIT", 1]]
+  ↳ app/controllers/pokemons_controller.rb:23:in `block in create_from_api'
+  [1m[36mPokemon Load (0.6ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons" WHERE "pokemons"."name" = $1 LIMIT $2[0m  [["name", "rattata"], ["LIMIT", 1]]
+  ↳ app/controllers/pokemons_controller.rb:23:in `block in create_from_api'
+  [1m[36mPokemon Load (0.6ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons" WHERE "pokemons"."name" = $1 LIMIT $2[0m  [["name", "raticate"], ["LIMIT", 1]]
+  ↳ app/controllers/pokemons_controller.rb:23:in `block in create_from_api'
+  Rendering layout layouts/application.html.erb
+  Rendering pokemons/index.html.erb within layouts/application
+  [1m[36mPokemon Load (1.2ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons" LIMIT $1 OFFSET $2[0m  [["LIMIT", 6], ["OFFSET", 12]]
+  ↳ app/views/pokemons/index.html.erb:9:in `each_with_index'
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "pokemons"[0m
+  ↳ app/views/pokemons/index.html.erb:27
+  Rendered pokemons/index.html.erb within layouts/application (Duration: 7.1ms | Allocations: 4237)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 15.2ms | Allocations: 11097)
+Completed 200 OK in 101ms (Views: 13.4ms | ActiveRecord: 13.3ms | Allocations: 27335)
+
+
+Started GET "/?page=3" for 127.0.0.1 at 2023-01-27 20:14:52 -0300
+Processing by PokemonsController#index as HTML
+  Parameters: {"page"=>"3"}
+  [1m[36mPokemon Load (0.7ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons" WHERE "pokemons"."name" = $1 LIMIT $2[0m  [["name", "bulbasaur"], ["LIMIT", 1]]
+  ↳ app/controllers/pokemons_controller.rb:23:in `block in create_from_api'
+  [1m[36mPokemon Load (0.3ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons" WHERE "pokemons"."name" = $1 LIMIT $2[0m  [["name", "ivysaur"], ["LIMIT", 1]]
+  ↳ app/controllers/pokemons_controller.rb:23:in `block in create_from_api'
+  [1m[36mPokemon Load (0.3ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons" WHERE "pokemons"."name" = $1 LIMIT $2[0m  [["name", "venusaur"], ["LIMIT", 1]]
+  ↳ app/controllers/pokemons_controller.rb:23:in `block in create_from_api'
+  [1m[36mPokemon Load (0.3ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons" WHERE "pokemons"."name" = $1 LIMIT $2[0m  [["name", "charmander"], ["LIMIT", 1]]
+  ↳ app/controllers/pokemons_controller.rb:23:in `block in create_from_api'
+  [1m[36mPokemon Load (1.2ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons" WHERE "pokemons"."name" = $1 LIMIT $2[0m  [["name", "charmeleon"], ["LIMIT", 1]]
+  ↳ app/controllers/pokemons_controller.rb:23:in `block in create_from_api'
+  [1m[36mPokemon Load (0.4ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons" WHERE "pokemons"."name" = $1 LIMIT $2[0m  [["name", "charizard"], ["LIMIT", 1]]
+  ↳ app/controllers/pokemons_controller.rb:23:in `block in create_from_api'
+  [1m[36mPokemon Load (0.3ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons" WHERE "pokemons"."name" = $1 LIMIT $2[0m  [["name", "squirtle"], ["LIMIT", 1]]
+  ↳ app/controllers/pokemons_controller.rb:23:in `block in create_from_api'
+  [1m[36mPokemon Load (0.4ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons" WHERE "pokemons"."name" = $1 LIMIT $2[0m  [["name", "wartortle"], ["LIMIT", 1]]
+  ↳ app/controllers/pokemons_controller.rb:23:in `block in create_from_api'
+  [1m[36mPokemon Load (0.4ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons" WHERE "pokemons"."name" = $1 LIMIT $2[0m  [["name", "blastoise"], ["LIMIT", 1]]
+  ↳ app/controllers/pokemons_controller.rb:23:in `block in create_from_api'
+  [1m[36mPokemon Load (0.3ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons" WHERE "pokemons"."name" = $1 LIMIT $2[0m  [["name", "caterpie"], ["LIMIT", 1]]
+  ↳ app/controllers/pokemons_controller.rb:23:in `block in create_from_api'
+  [1m[36mPokemon Load (0.3ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons" WHERE "pokemons"."name" = $1 LIMIT $2[0m  [["name", "metapod"], ["LIMIT", 1]]
+  ↳ app/controllers/pokemons_controller.rb:23:in `block in create_from_api'
+  [1m[36mPokemon Load (0.3ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons" WHERE "pokemons"."name" = $1 LIMIT $2[0m  [["name", "butterfree"], ["LIMIT", 1]]
+  ↳ app/controllers/pokemons_controller.rb:23:in `block in create_from_api'
+  [1m[36mPokemon Load (0.3ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons" WHERE "pokemons"."name" = $1 LIMIT $2[0m  [["name", "weedle"], ["LIMIT", 1]]
+  ↳ app/controllers/pokemons_controller.rb:23:in `block in create_from_api'
+  [1m[36mPokemon Load (0.3ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons" WHERE "pokemons"."name" = $1 LIMIT $2[0m  [["name", "kakuna"], ["LIMIT", 1]]
+  ↳ app/controllers/pokemons_controller.rb:23:in `block in create_from_api'
+  [1m[36mPokemon Load (0.3ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons" WHERE "pokemons"."name" = $1 LIMIT $2[0m  [["name", "beedrill"], ["LIMIT", 1]]
+  ↳ app/controllers/pokemons_controller.rb:23:in `block in create_from_api'
+  [1m[36mPokemon Load (0.3ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons" WHERE "pokemons"."name" = $1 LIMIT $2[0m  [["name", "pidgey"], ["LIMIT", 1]]
+  ↳ app/controllers/pokemons_controller.rb:23:in `block in create_from_api'
+  [1m[36mPokemon Load (0.3ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons" WHERE "pokemons"."name" = $1 LIMIT $2[0m  [["name", "pidgeotto"], ["LIMIT", 1]]
+  ↳ app/controllers/pokemons_controller.rb:23:in `block in create_from_api'
+  [1m[36mPokemon Load (0.3ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons" WHERE "pokemons"."name" = $1 LIMIT $2[0m  [["name", "pidgeot"], ["LIMIT", 1]]
+  ↳ app/controllers/pokemons_controller.rb:23:in `block in create_from_api'
+  [1m[36mPokemon Load (0.5ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons" WHERE "pokemons"."name" = $1 LIMIT $2[0m  [["name", "rattata"], ["LIMIT", 1]]
+  ↳ app/controllers/pokemons_controller.rb:23:in `block in create_from_api'
+  [1m[36mPokemon Load (0.3ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons" WHERE "pokemons"."name" = $1 LIMIT $2[0m  [["name", "raticate"], ["LIMIT", 1]]
+  ↳ app/controllers/pokemons_controller.rb:23:in `block in create_from_api'
+  Rendering layout layouts/application.html.erb
+  Rendering pokemons/index.html.erb within layouts/application
+  [1m[36mPokemon Load (0.6ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons" LIMIT $1 OFFSET $2[0m  [["LIMIT", 6], ["OFFSET", 12]]
+  ↳ app/views/pokemons/index.html.erb:9:in `each_with_index'
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "pokemons"[0m
+  ↳ app/views/pokemons/index.html.erb:27
+  Rendered pokemons/index.html.erb within layouts/application (Duration: 10.7ms | Allocations: 7119)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 22.1ms | Allocations: 14283)
+Completed 200 OK in 114ms (Views: 23.0ms | ActiveRecord: 9.5ms | Allocations: 30853)
+
+
+Started GET "/pokemons/1839" for 127.0.0.1 at 2023-01-27 20:14:54 -0300
+Processing by PokemonsController#show as HTML
+  Parameters: {"id"=>"1839"}
+  [1m[36mPokemon Load (1.6ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons" WHERE "pokemons"."id" = $1 LIMIT $2[0m  [["id", 1839], ["LIMIT", 1]]
+  ↳ app/controllers/pokemons_controller.rb:14:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering pokemons/show.html.erb within layouts/application
+  Rendered pokemons/show.html.erb within layouts/application (Duration: 1.5ms | Allocations: 346)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 23.3ms | Allocations: 7112)
+Completed 200 OK in 35ms (Views: 24.1ms | ActiveRecord: 1.6ms | Allocations: 8501)
+
+
+Started GET "/pokemons/1839" for 127.0.0.1 at 2023-01-27 20:15:20 -0300
+Processing by PokemonsController#show as HTML
+  Parameters: {"id"=>"1839"}
+  [1m[36mPokemon Load (1.5ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons" WHERE "pokemons"."id" = $1 LIMIT $2[0m  [["id", 1839], ["LIMIT", 1]]
+  ↳ app/controllers/pokemons_controller.rb:14:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering pokemons/show.html.erb within layouts/application
+  Rendered pokemons/show.html.erb within layouts/application (Duration: 1.9ms | Allocations: 444)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 22.3ms | Allocations: 7614)
+Completed 200 OK in 36ms (Views: 26.2ms | ActiveRecord: 1.5ms | Allocations: 9768)
+
+
+Started GET "/pokemons/1839" for 127.0.0.1 at 2023-01-27 20:15:34 -0300
+Processing by PokemonsController#show as HTML
+  Parameters: {"id"=>"1839"}
+  [1m[36mPokemon Load (6.8ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons" WHERE "pokemons"."id" = $1 LIMIT $2[0m  [["id", 1839], ["LIMIT", 1]]
+  ↳ app/controllers/pokemons_controller.rb:14:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering pokemons/show.html.erb within layouts/application
+  Rendered pokemons/show.html.erb within layouts/application (Duration: 1.0ms | Allocations: 123)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 34.2ms | Allocations: 6983)
+Completed 200 OK in 52ms (Views: 35.3ms | ActiveRecord: 6.8ms | Allocations: 8319)
+
+
+Started GET "/pokemons/1839" for 127.0.0.1 at 2023-01-27 20:15:37 -0300
+Processing by PokemonsController#show as HTML
+  Parameters: {"id"=>"1839"}
+  [1m[36mPokemon Load (0.9ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons" WHERE "pokemons"."id" = $1 LIMIT $2[0m  [["id", 1839], ["LIMIT", 1]]
+  ↳ app/controllers/pokemons_controller.rb:14:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering pokemons/show.html.erb within layouts/application
+  Rendered pokemons/show.html.erb within layouts/application (Duration: 2.5ms | Allocations: 443)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 40.4ms | Allocations: 7619)
+Completed 200 OK in 50ms (Views: 45.4ms | ActiveRecord: 0.9ms | Allocations: 9778)
+
+
+Started GET "/pokemons/1839" for 127.0.0.1 at 2023-01-27 20:16:23 -0300
+Processing by PokemonsController#show as HTML
+  Parameters: {"id"=>"1839"}
+  [1m[36mPokemon Load (1.1ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons" WHERE "pokemons"."id" = $1 LIMIT $2[0m  [["id", 1839], ["LIMIT", 1]]
+  ↳ app/controllers/pokemons_controller.rb:14:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering pokemons/show.html.erb within layouts/application
+  Rendered pokemons/show.html.erb within layouts/application (Duration: 2.0ms | Allocations: 445)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 28.5ms | Allocations: 7709)
+Completed 200 OK in 44ms (Views: 33.7ms | ActiveRecord: 1.1ms | Allocations: 10027)
+
+
+Started GET "/?page=3" for 127.0.0.1 at 2023-01-27 20:16:31 -0300
+Processing by PokemonsController#index as HTML
+  Parameters: {"page"=>"3"}
+  [1m[36mPokemon Load (1.1ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons" WHERE "pokemons"."name" = $1 LIMIT $2[0m  [["name", "bulbasaur"], ["LIMIT", 1]]
+  ↳ app/controllers/pokemons_controller.rb:23:in `block in create_from_api'
+  [1m[36mPokemon Load (0.9ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons" WHERE "pokemons"."name" = $1 LIMIT $2[0m  [["name", "ivysaur"], ["LIMIT", 1]]
+  ↳ app/controllers/pokemons_controller.rb:23:in `block in create_from_api'
+  [1m[36mPokemon Load (0.5ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons" WHERE "pokemons"."name" = $1 LIMIT $2[0m  [["name", "venusaur"], ["LIMIT", 1]]
+  ↳ app/controllers/pokemons_controller.rb:23:in `block in create_from_api'
+  [1m[36mPokemon Load (0.4ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons" WHERE "pokemons"."name" = $1 LIMIT $2[0m  [["name", "charmander"], ["LIMIT", 1]]
+  ↳ app/controllers/pokemons_controller.rb:23:in `block in create_from_api'
+  [1m[36mPokemon Load (0.4ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons" WHERE "pokemons"."name" = $1 LIMIT $2[0m  [["name", "charmeleon"], ["LIMIT", 1]]
+  ↳ app/controllers/pokemons_controller.rb:23:in `block in create_from_api'
+  [1m[36mPokemon Load (1.5ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons" WHERE "pokemons"."name" = $1 LIMIT $2[0m  [["name", "charizard"], ["LIMIT", 1]]
+  ↳ app/controllers/pokemons_controller.rb:23:in `block in create_from_api'
+  [1m[36mPokemon Load (0.4ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons" WHERE "pokemons"."name" = $1 LIMIT $2[0m  [["name", "squirtle"], ["LIMIT", 1]]
+  ↳ app/controllers/pokemons_controller.rb:23:in `block in create_from_api'
+  [1m[36mPokemon Load (0.4ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons" WHERE "pokemons"."name" = $1 LIMIT $2[0m  [["name", "wartortle"], ["LIMIT", 1]]
+  ↳ app/controllers/pokemons_controller.rb:23:in `block in create_from_api'
+  [1m[36mPokemon Load (0.4ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons" WHERE "pokemons"."name" = $1 LIMIT $2[0m  [["name", "blastoise"], ["LIMIT", 1]]
+  ↳ app/controllers/pokemons_controller.rb:23:in `block in create_from_api'
+  [1m[36mPokemon Load (0.4ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons" WHERE "pokemons"."name" = $1 LIMIT $2[0m  [["name", "caterpie"], ["LIMIT", 1]]
+  ↳ app/controllers/pokemons_controller.rb:23:in `block in create_from_api'
+  [1m[36mPokemon Load (0.4ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons" WHERE "pokemons"."name" = $1 LIMIT $2[0m  [["name", "metapod"], ["LIMIT", 1]]
+  ↳ app/controllers/pokemons_controller.rb:23:in `block in create_from_api'
+  [1m[36mPokemon Load (0.4ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons" WHERE "pokemons"."name" = $1 LIMIT $2[0m  [["name", "butterfree"], ["LIMIT", 1]]
+  ↳ app/controllers/pokemons_controller.rb:23:in `block in create_from_api'
+  [1m[36mPokemon Load (0.6ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons" WHERE "pokemons"."name" = $1 LIMIT $2[0m  [["name", "weedle"], ["LIMIT", 1]]
+  ↳ app/controllers/pokemons_controller.rb:23:in `block in create_from_api'
+  [1m[36mPokemon Load (0.4ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons" WHERE "pokemons"."name" = $1 LIMIT $2[0m  [["name", "kakuna"], ["LIMIT", 1]]
+  ↳ app/controllers/pokemons_controller.rb:23:in `block in create_from_api'
+  [1m[36mPokemon Load (0.4ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons" WHERE "pokemons"."name" = $1 LIMIT $2[0m  [["name", "beedrill"], ["LIMIT", 1]]
+  ↳ app/controllers/pokemons_controller.rb:23:in `block in create_from_api'
+  [1m[36mPokemon Load (0.4ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons" WHERE "pokemons"."name" = $1 LIMIT $2[0m  [["name", "pidgey"], ["LIMIT", 1]]
+  ↳ app/controllers/pokemons_controller.rb:23:in `block in create_from_api'
+  [1m[36mPokemon Load (0.3ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons" WHERE "pokemons"."name" = $1 LIMIT $2[0m  [["name", "pidgeotto"], ["LIMIT", 1]]
+  ↳ app/controllers/pokemons_controller.rb:23:in `block in create_from_api'
+  [1m[36mPokemon Load (0.3ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons" WHERE "pokemons"."name" = $1 LIMIT $2[0m  [["name", "pidgeot"], ["LIMIT", 1]]
+  ↳ app/controllers/pokemons_controller.rb:23:in `block in create_from_api'
+  [1m[36mPokemon Load (0.4ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons" WHERE "pokemons"."name" = $1 LIMIT $2[0m  [["name", "rattata"], ["LIMIT", 1]]
+  ↳ app/controllers/pokemons_controller.rb:23:in `block in create_from_api'
+  [1m[36mPokemon Load (0.4ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons" WHERE "pokemons"."name" = $1 LIMIT $2[0m  [["name", "raticate"], ["LIMIT", 1]]
+  ↳ app/controllers/pokemons_controller.rb:23:in `block in create_from_api'
+  Rendering layout layouts/application.html.erb
+  Rendering pokemons/index.html.erb within layouts/application
+  [1m[36mPokemon Load (0.9ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons" LIMIT $1 OFFSET $2[0m  [["LIMIT", 6], ["OFFSET", 12]]
+  ↳ app/views/pokemons/index.html.erb:9:in `each_with_index'
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT COUNT(*) FROM "pokemons"[0m
+  ↳ app/views/pokemons/index.html.erb:27
+  Rendered pokemons/index.html.erb within layouts/application (Duration: 10.1ms | Allocations: 6902)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 23.1ms | Allocations: 13668)
+Completed 200 OK in 111ms (Views: 21.7ms | ActiveRecord: 11.9ms | Allocations: 30359)
+
+
+Started GET "/pokemons/1843" for 127.0.0.1 at 2023-01-27 20:16:33 -0300
+Processing by PokemonsController#show as HTML
+  Parameters: {"id"=>"1843"}
+  [1m[36mPokemon Load (0.9ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons" WHERE "pokemons"."id" = $1 LIMIT $2[0m  [["id", 1843], ["LIMIT", 1]]
+  ↳ app/controllers/pokemons_controller.rb:14:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering pokemons/show.html.erb within layouts/application
+  Rendered pokemons/show.html.erb within layouts/application (Duration: 0.3ms | Allocations: 125)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 14.8ms | Allocations: 7417)
+Completed 200 OK in 19ms (Views: 15.5ms | ActiveRecord: 0.9ms | Allocations: 8621)
+
+
+Started GET "/?page=3" for 127.0.0.1 at 2023-01-27 20:17:42 -0300
+Processing by PokemonsController#index as HTML
+  Parameters: {"page"=>"3"}
+  [1m[36mPokemon Load (0.7ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons" WHERE "pokemons"."name" = $1 LIMIT $2[0m  [["name", "bulbasaur"], ["LIMIT", 1]]
+  ↳ app/controllers/pokemons_controller.rb:23:in `block in create_from_api'
+  [1m[36mPokemon Load (0.3ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons" WHERE "pokemons"."name" = $1 LIMIT $2[0m  [["name", "ivysaur"], ["LIMIT", 1]]
+  ↳ app/controllers/pokemons_controller.rb:23:in `block in create_from_api'
+  [1m[36mPokemon Load (0.4ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons" WHERE "pokemons"."name" = $1 LIMIT $2[0m  [["name", "venusaur"], ["LIMIT", 1]]
+  ↳ app/controllers/pokemons_controller.rb:23:in `block in create_from_api'
+  [1m[36mPokemon Load (0.3ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons" WHERE "pokemons"."name" = $1 LIMIT $2[0m  [["name", "charmander"], ["LIMIT", 1]]
+  ↳ app/controllers/pokemons_controller.rb:23:in `block in create_from_api'
+  [1m[36mPokemon Load (0.4ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons" WHERE "pokemons"."name" = $1 LIMIT $2[0m  [["name", "charmeleon"], ["LIMIT", 1]]
+  ↳ app/controllers/pokemons_controller.rb:23:in `block in create_from_api'
+  [1m[36mPokemon Load (0.4ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons" WHERE "pokemons"."name" = $1 LIMIT $2[0m  [["name", "charizard"], ["LIMIT", 1]]
+  ↳ app/controllers/pokemons_controller.rb:23:in `block in create_from_api'
+  [1m[36mPokemon Load (0.4ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons" WHERE "pokemons"."name" = $1 LIMIT $2[0m  [["name", "squirtle"], ["LIMIT", 1]]
+  ↳ app/controllers/pokemons_controller.rb:23:in `block in create_from_api'
+  [1m[36mPokemon Load (0.3ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons" WHERE "pokemons"."name" = $1 LIMIT $2[0m  [["name", "wartortle"], ["LIMIT", 1]]
+  ↳ app/controllers/pokemons_controller.rb:23:in `block in create_from_api'
+  [1m[36mPokemon Load (0.3ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons" WHERE "pokemons"."name" = $1 LIMIT $2[0m  [["name", "blastoise"], ["LIMIT", 1]]
+  ↳ app/controllers/pokemons_controller.rb:23:in `block in create_from_api'
+  [1m[36mPokemon Load (0.3ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons" WHERE "pokemons"."name" = $1 LIMIT $2[0m  [["name", "caterpie"], ["LIMIT", 1]]
+  ↳ app/controllers/pokemons_controller.rb:23:in `block in create_from_api'
+  [1m[36mPokemon Load (0.3ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons" WHERE "pokemons"."name" = $1 LIMIT $2[0m  [["name", "metapod"], ["LIMIT", 1]]
+  ↳ app/controllers/pokemons_controller.rb:23:in `block in create_from_api'
+  [1m[36mPokemon Load (0.3ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons" WHERE "pokemons"."name" = $1 LIMIT $2[0m  [["name", "butterfree"], ["LIMIT", 1]]
+  ↳ app/controllers/pokemons_controller.rb:23:in `block in create_from_api'
+  [1m[36mPokemon Load (0.3ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons" WHERE "pokemons"."name" = $1 LIMIT $2[0m  [["name", "weedle"], ["LIMIT", 1]]
+  ↳ app/controllers/pokemons_controller.rb:23:in `block in create_from_api'
+  [1m[36mPokemon Load (0.9ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons" WHERE "pokemons"."name" = $1 LIMIT $2[0m  [["name", "kakuna"], ["LIMIT", 1]]
+  ↳ app/controllers/pokemons_controller.rb:23:in `block in create_from_api'
+  [1m[36mPokemon Load (0.7ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons" WHERE "pokemons"."name" = $1 LIMIT $2[0m  [["name", "beedrill"], ["LIMIT", 1]]
+  ↳ app/controllers/pokemons_controller.rb:23:in `block in create_from_api'
+  [1m[36mPokemon Load (0.7ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons" WHERE "pokemons"."name" = $1 LIMIT $2[0m  [["name", "pidgey"], ["LIMIT", 1]]
+  ↳ app/controllers/pokemons_controller.rb:23:in `block in create_from_api'
+  [1m[36mPokemon Load (0.4ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons" WHERE "pokemons"."name" = $1 LIMIT $2[0m  [["name", "pidgeotto"], ["LIMIT", 1]]
+  ↳ app/controllers/pokemons_controller.rb:23:in `block in create_from_api'
+  [1m[36mPokemon Load (0.3ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons" WHERE "pokemons"."name" = $1 LIMIT $2[0m  [["name", "pidgeot"], ["LIMIT", 1]]
+  ↳ app/controllers/pokemons_controller.rb:23:in `block in create_from_api'
+  [1m[36mPokemon Load (0.3ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons" WHERE "pokemons"."name" = $1 LIMIT $2[0m  [["name", "rattata"], ["LIMIT", 1]]
+  ↳ app/controllers/pokemons_controller.rb:23:in `block in create_from_api'
+  [1m[36mPokemon Load (0.3ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons" WHERE "pokemons"."name" = $1 LIMIT $2[0m  [["name", "raticate"], ["LIMIT", 1]]
+  ↳ app/controllers/pokemons_controller.rb:23:in `block in create_from_api'
+  Rendering layout layouts/application.html.erb
+  Rendering pokemons/index.html.erb within layouts/application
+  [1m[36mPokemon Load (0.5ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons" LIMIT $1 OFFSET $2[0m  [["LIMIT", 6], ["OFFSET", 12]]
+  ↳ app/views/pokemons/index.html.erb:9:in `each_with_index'
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT COUNT(*) FROM "pokemons"[0m
+  ↳ app/views/pokemons/index.html.erb:27
+  Rendered pokemons/index.html.erb within layouts/application (Duration: 5.4ms | Allocations: 4236)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 20.7ms | Allocations: 11008)
+Completed 200 OK in 99ms (Views: 20.2ms | ActiveRecord: 9.6ms | Allocations: 27245)
+
+
+Started GET "/pokemons/1841" for 127.0.0.1 at 2023-01-27 20:17:45 -0300
+Processing by PokemonsController#show as HTML
+  Parameters: {"id"=>"1841"}
+  [1m[36mPokemon Load (0.8ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons" WHERE "pokemons"."id" = $1 LIMIT $2[0m  [["id", 1841], ["LIMIT", 1]]
+  ↳ app/controllers/pokemons_controller.rb:14:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering pokemons/show.html.erb within layouts/application
+  Rendered pokemons/show.html.erb within layouts/application (Duration: 1.0ms | Allocations: 125)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 16.9ms | Allocations: 7503)
+Completed 200 OK in 23ms (Views: 18.6ms | ActiveRecord: 0.8ms | Allocations: 8694)
+
+
+Started GET "/?page=3" for 127.0.0.1 at 2023-01-27 20:17:46 -0300
+Processing by PokemonsController#index as HTML
+  Parameters: {"page"=>"3"}
+  [1m[36mPokemon Load (0.9ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons" WHERE "pokemons"."name" = $1 LIMIT $2[0m  [["name", "bulbasaur"], ["LIMIT", 1]]
+  ↳ app/controllers/pokemons_controller.rb:23:in `block in create_from_api'
+  [1m[36mPokemon Load (1.2ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons" WHERE "pokemons"."name" = $1 LIMIT $2[0m  [["name", "ivysaur"], ["LIMIT", 1]]
+  ↳ app/controllers/pokemons_controller.rb:23:in `block in create_from_api'
+  [1m[36mPokemon Load (1.1ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons" WHERE "pokemons"."name" = $1 LIMIT $2[0m  [["name", "venusaur"], ["LIMIT", 1]]
+  ↳ app/controllers/pokemons_controller.rb:23:in `block in create_from_api'
+  [1m[36mPokemon Load (1.0ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons" WHERE "pokemons"."name" = $1 LIMIT $2[0m  [["name", "charmander"], ["LIMIT", 1]]
+  ↳ app/controllers/pokemons_controller.rb:23:in `block in create_from_api'
+  [1m[36mPokemon Load (0.8ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons" WHERE "pokemons"."name" = $1 LIMIT $2[0m  [["name", "charmeleon"], ["LIMIT", 1]]
+  ↳ app/controllers/pokemons_controller.rb:23:in `block in create_from_api'
+  [1m[36mPokemon Load (0.8ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons" WHERE "pokemons"."name" = $1 LIMIT $2[0m  [["name", "charizard"], ["LIMIT", 1]]
+  ↳ app/controllers/pokemons_controller.rb:23:in `block in create_from_api'
+  [1m[36mPokemon Load (0.8ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons" WHERE "pokemons"."name" = $1 LIMIT $2[0m  [["name", "squirtle"], ["LIMIT", 1]]
+  ↳ app/controllers/pokemons_controller.rb:23:in `block in create_from_api'
+  [1m[36mPokemon Load (0.8ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons" WHERE "pokemons"."name" = $1 LIMIT $2[0m  [["name", "wartortle"], ["LIMIT", 1]]
+  ↳ app/controllers/pokemons_controller.rb:23:in `block in create_from_api'
+  [1m[36mPokemon Load (0.8ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons" WHERE "pokemons"."name" = $1 LIMIT $2[0m  [["name", "blastoise"], ["LIMIT", 1]]
+  ↳ app/controllers/pokemons_controller.rb:23:in `block in create_from_api'
+  [1m[36mPokemon Load (1.1ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons" WHERE "pokemons"."name" = $1 LIMIT $2[0m  [["name", "caterpie"], ["LIMIT", 1]]
+  ↳ app/controllers/pokemons_controller.rb:23:in `block in create_from_api'
+  [1m[36mPokemon Load (0.7ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons" WHERE "pokemons"."name" = $1 LIMIT $2[0m  [["name", "metapod"], ["LIMIT", 1]]
+  ↳ app/controllers/pokemons_controller.rb:23:in `block in create_from_api'
+  [1m[36mPokemon Load (0.7ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons" WHERE "pokemons"."name" = $1 LIMIT $2[0m  [["name", "butterfree"], ["LIMIT", 1]]
+  ↳ app/controllers/pokemons_controller.rb:23:in `block in create_from_api'
+  [1m[36mPokemon Load (0.9ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons" WHERE "pokemons"."name" = $1 LIMIT $2[0m  [["name", "weedle"], ["LIMIT", 1]]
+  ↳ app/controllers/pokemons_controller.rb:23:in `block in create_from_api'
+  [1m[36mPokemon Load (0.7ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons" WHERE "pokemons"."name" = $1 LIMIT $2[0m  [["name", "kakuna"], ["LIMIT", 1]]
+  ↳ app/controllers/pokemons_controller.rb:23:in `block in create_from_api'
+  [1m[36mPokemon Load (0.8ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons" WHERE "pokemons"."name" = $1 LIMIT $2[0m  [["name", "beedrill"], ["LIMIT", 1]]
+  ↳ app/controllers/pokemons_controller.rb:23:in `block in create_from_api'
+  [1m[36mPokemon Load (0.8ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons" WHERE "pokemons"."name" = $1 LIMIT $2[0m  [["name", "pidgey"], ["LIMIT", 1]]
+  ↳ app/controllers/pokemons_controller.rb:23:in `block in create_from_api'
+  [1m[36mPokemon Load (0.7ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons" WHERE "pokemons"."name" = $1 LIMIT $2[0m  [["name", "pidgeotto"], ["LIMIT", 1]]
+  ↳ app/controllers/pokemons_controller.rb:23:in `block in create_from_api'
+  [1m[36mPokemon Load (0.6ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons" WHERE "pokemons"."name" = $1 LIMIT $2[0m  [["name", "pidgeot"], ["LIMIT", 1]]
+  ↳ app/controllers/pokemons_controller.rb:23:in `block in create_from_api'
+  [1m[36mPokemon Load (0.6ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons" WHERE "pokemons"."name" = $1 LIMIT $2[0m  [["name", "rattata"], ["LIMIT", 1]]
+  ↳ app/controllers/pokemons_controller.rb:23:in `block in create_from_api'
+  [1m[36mPokemon Load (0.6ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons" WHERE "pokemons"."name" = $1 LIMIT $2[0m  [["name", "raticate"], ["LIMIT", 1]]
+  ↳ app/controllers/pokemons_controller.rb:23:in `block in create_from_api'
+  Rendering layout layouts/application.html.erb
+  Rendering pokemons/index.html.erb within layouts/application
+  [1m[36mPokemon Load (1.3ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons" LIMIT $1 OFFSET $2[0m  [["LIMIT", 6], ["OFFSET", 12]]
+  ↳ app/views/pokemons/index.html.erb:9:in `each_with_index'
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "pokemons"[0m
+  ↳ app/views/pokemons/index.html.erb:27
+  Rendered pokemons/index.html.erb within layouts/application (Duration: 7.9ms | Allocations: 4236)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 16.3ms | Allocations: 11096)
+Completed 200 OK in 136ms (Views: 14.2ms | ActiveRecord: 18.8ms | Allocations: 27322)
+
+
+Started GET "/pokemons/1842" for 127.0.0.1 at 2023-01-27 20:17:50 -0300
+Processing by PokemonsController#show as HTML
+  Parameters: {"id"=>"1842"}
+  [1m[36mPokemon Load (0.7ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons" WHERE "pokemons"."id" = $1 LIMIT $2[0m  [["id", 1842], ["LIMIT", 1]]
+  ↳ app/controllers/pokemons_controller.rb:14:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering pokemons/show.html.erb within layouts/application
+  Rendered pokemons/show.html.erb within layouts/application (Duration: 0.3ms | Allocations: 125)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 14.1ms | Allocations: 6891)
+Completed 200 OK in 19ms (Views: 14.6ms | ActiveRecord: 0.7ms | Allocations: 8082)
+
+
+Started GET "/?page=3" for 127.0.0.1 at 2023-01-27 20:17:51 -0300
+Processing by PokemonsController#index as HTML
+  Parameters: {"page"=>"3"}
+  [1m[36mPokemon Load (0.8ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons" WHERE "pokemons"."name" = $1 LIMIT $2[0m  [["name", "bulbasaur"], ["LIMIT", 1]]
+  ↳ app/controllers/pokemons_controller.rb:23:in `block in create_from_api'
+  [1m[36mPokemon Load (0.7ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons" WHERE "pokemons"."name" = $1 LIMIT $2[0m  [["name", "ivysaur"], ["LIMIT", 1]]
+  ↳ app/controllers/pokemons_controller.rb:23:in `block in create_from_api'
+  [1m[36mPokemon Load (0.6ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons" WHERE "pokemons"."name" = $1 LIMIT $2[0m  [["name", "venusaur"], ["LIMIT", 1]]
+  ↳ app/controllers/pokemons_controller.rb:23:in `block in create_from_api'
+  [1m[36mPokemon Load (0.4ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons" WHERE "pokemons"."name" = $1 LIMIT $2[0m  [["name", "charmander"], ["LIMIT", 1]]
+  ↳ app/controllers/pokemons_controller.rb:23:in `block in create_from_api'
+  [1m[36mPokemon Load (0.4ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons" WHERE "pokemons"."name" = $1 LIMIT $2[0m  [["name", "charmeleon"], ["LIMIT", 1]]
+  ↳ app/controllers/pokemons_controller.rb:23:in `block in create_from_api'
+  [1m[36mPokemon Load (0.4ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons" WHERE "pokemons"."name" = $1 LIMIT $2[0m  [["name", "charizard"], ["LIMIT", 1]]
+  ↳ app/controllers/pokemons_controller.rb:23:in `block in create_from_api'
+  [1m[36mPokemon Load (0.4ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons" WHERE "pokemons"."name" = $1 LIMIT $2[0m  [["name", "squirtle"], ["LIMIT", 1]]
+  ↳ app/controllers/pokemons_controller.rb:23:in `block in create_from_api'
+  [1m[36mPokemon Load (0.5ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons" WHERE "pokemons"."name" = $1 LIMIT $2[0m  [["name", "wartortle"], ["LIMIT", 1]]
+  ↳ app/controllers/pokemons_controller.rb:23:in `block in create_from_api'
+  [1m[36mPokemon Load (1.4ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons" WHERE "pokemons"."name" = $1 LIMIT $2[0m  [["name", "blastoise"], ["LIMIT", 1]]
+  ↳ app/controllers/pokemons_controller.rb:23:in `block in create_from_api'
+  [1m[36mPokemon Load (0.5ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons" WHERE "pokemons"."name" = $1 LIMIT $2[0m  [["name", "caterpie"], ["LIMIT", 1]]
+  ↳ app/controllers/pokemons_controller.rb:23:in `block in create_from_api'
+  [1m[36mPokemon Load (0.5ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons" WHERE "pokemons"."name" = $1 LIMIT $2[0m  [["name", "metapod"], ["LIMIT", 1]]
+  ↳ app/controllers/pokemons_controller.rb:23:in `block in create_from_api'
+  [1m[36mPokemon Load (0.5ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons" WHERE "pokemons"."name" = $1 LIMIT $2[0m  [["name", "butterfree"], ["LIMIT", 1]]
+  ↳ app/controllers/pokemons_controller.rb:23:in `block in create_from_api'
+  [1m[36mPokemon Load (0.5ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons" WHERE "pokemons"."name" = $1 LIMIT $2[0m  [["name", "weedle"], ["LIMIT", 1]]
+  ↳ app/controllers/pokemons_controller.rb:23:in `block in create_from_api'
+  [1m[36mPokemon Load (0.6ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons" WHERE "pokemons"."name" = $1 LIMIT $2[0m  [["name", "kakuna"], ["LIMIT", 1]]
+  ↳ app/controllers/pokemons_controller.rb:23:in `block in create_from_api'
+  [1m[36mPokemon Load (0.5ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons" WHERE "pokemons"."name" = $1 LIMIT $2[0m  [["name", "beedrill"], ["LIMIT", 1]]
+  ↳ app/controllers/pokemons_controller.rb:23:in `block in create_from_api'
+  [1m[36mPokemon Load (0.7ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons" WHERE "pokemons"."name" = $1 LIMIT $2[0m  [["name", "pidgey"], ["LIMIT", 1]]
+  ↳ app/controllers/pokemons_controller.rb:23:in `block in create_from_api'
+  [1m[36mPokemon Load (0.5ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons" WHERE "pokemons"."name" = $1 LIMIT $2[0m  [["name", "pidgeotto"], ["LIMIT", 1]]
+  ↳ app/controllers/pokemons_controller.rb:23:in `block in create_from_api'
+  [1m[36mPokemon Load (0.5ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons" WHERE "pokemons"."name" = $1 LIMIT $2[0m  [["name", "pidgeot"], ["LIMIT", 1]]
+  ↳ app/controllers/pokemons_controller.rb:23:in `block in create_from_api'
+  [1m[36mPokemon Load (0.6ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons" WHERE "pokemons"."name" = $1 LIMIT $2[0m  [["name", "rattata"], ["LIMIT", 1]]
+  ↳ app/controllers/pokemons_controller.rb:23:in `block in create_from_api'
+  [1m[36mPokemon Load (0.6ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons" WHERE "pokemons"."name" = $1 LIMIT $2[0m  [["name", "raticate"], ["LIMIT", 1]]
+  ↳ app/controllers/pokemons_controller.rb:23:in `block in create_from_api'
+  Rendering layout layouts/application.html.erb
+  Rendering pokemons/index.html.erb within layouts/application
+  [1m[36mPokemon Load (0.8ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons" LIMIT $1 OFFSET $2[0m  [["LIMIT", 6], ["OFFSET", 12]]
+  ↳ app/views/pokemons/index.html.erb:9:in `each_with_index'
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT COUNT(*) FROM "pokemons"[0m
+  ↳ app/views/pokemons/index.html.erb:27
+  Rendered pokemons/index.html.erb within layouts/application (Duration: 5.8ms | Allocations: 4236)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 13.8ms | Allocations: 11002)
+Completed 200 OK in 94ms (Views: 12.5ms | ActiveRecord: 13.2ms | Allocations: 27231)
+
+
+Started GET "/?page=4" for 127.0.0.1 at 2023-01-27 20:17:54 -0300
+Processing by PokemonsController#index as HTML
+  Parameters: {"page"=>"4"}
+  [1m[36mPokemon Load (0.3ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons" WHERE "pokemons"."name" = $1 LIMIT $2[0m  [["name", "bulbasaur"], ["LIMIT", 1]]
+  ↳ app/controllers/pokemons_controller.rb:23:in `block in create_from_api'
+  [1m[36mPokemon Load (0.3ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons" WHERE "pokemons"."name" = $1 LIMIT $2[0m  [["name", "ivysaur"], ["LIMIT", 1]]
+  ↳ app/controllers/pokemons_controller.rb:23:in `block in create_from_api'
+  [1m[36mPokemon Load (0.3ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons" WHERE "pokemons"."name" = $1 LIMIT $2[0m  [["name", "venusaur"], ["LIMIT", 1]]
+  ↳ app/controllers/pokemons_controller.rb:23:in `block in create_from_api'
+  [1m[36mPokemon Load (0.3ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons" WHERE "pokemons"."name" = $1 LIMIT $2[0m  [["name", "charmander"], ["LIMIT", 1]]
+  ↳ app/controllers/pokemons_controller.rb:23:in `block in create_from_api'
+  [1m[36mPokemon Load (1.1ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons" WHERE "pokemons"."name" = $1 LIMIT $2[0m  [["name", "charmeleon"], ["LIMIT", 1]]
+  ↳ app/controllers/pokemons_controller.rb:23:in `block in create_from_api'
+  [1m[36mPokemon Load (0.3ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons" WHERE "pokemons"."name" = $1 LIMIT $2[0m  [["name", "charizard"], ["LIMIT", 1]]
+  ↳ app/controllers/pokemons_controller.rb:23:in `block in create_from_api'
+  [1m[36mPokemon Load (0.3ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons" WHERE "pokemons"."name" = $1 LIMIT $2[0m  [["name", "squirtle"], ["LIMIT", 1]]
+  ↳ app/controllers/pokemons_controller.rb:23:in `block in create_from_api'
+  [1m[36mPokemon Load (0.3ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons" WHERE "pokemons"."name" = $1 LIMIT $2[0m  [["name", "wartortle"], ["LIMIT", 1]]
+  ↳ app/controllers/pokemons_controller.rb:23:in `block in create_from_api'
+  [1m[36mPokemon Load (0.3ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons" WHERE "pokemons"."name" = $1 LIMIT $2[0m  [["name", "blastoise"], ["LIMIT", 1]]
+  ↳ app/controllers/pokemons_controller.rb:23:in `block in create_from_api'
+  [1m[36mPokemon Load (0.4ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons" WHERE "pokemons"."name" = $1 LIMIT $2[0m  [["name", "caterpie"], ["LIMIT", 1]]
+  ↳ app/controllers/pokemons_controller.rb:23:in `block in create_from_api'
+  [1m[36mPokemon Load (0.7ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons" WHERE "pokemons"."name" = $1 LIMIT $2[0m  [["name", "metapod"], ["LIMIT", 1]]
+  ↳ app/controllers/pokemons_controller.rb:23:in `block in create_from_api'
+  [1m[36mPokemon Load (0.7ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons" WHERE "pokemons"."name" = $1 LIMIT $2[0m  [["name", "butterfree"], ["LIMIT", 1]]
+  ↳ app/controllers/pokemons_controller.rb:23:in `block in create_from_api'
+  [1m[36mPokemon Load (0.6ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons" WHERE "pokemons"."name" = $1 LIMIT $2[0m  [["name", "weedle"], ["LIMIT", 1]]
+  ↳ app/controllers/pokemons_controller.rb:23:in `block in create_from_api'
+  [1m[36mPokemon Load (0.6ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons" WHERE "pokemons"."name" = $1 LIMIT $2[0m  [["name", "kakuna"], ["LIMIT", 1]]
+  ↳ app/controllers/pokemons_controller.rb:23:in `block in create_from_api'
+  [1m[36mPokemon Load (0.9ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons" WHERE "pokemons"."name" = $1 LIMIT $2[0m  [["name", "beedrill"], ["LIMIT", 1]]
+  ↳ app/controllers/pokemons_controller.rb:23:in `block in create_from_api'
+  [1m[36mPokemon Load (0.6ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons" WHERE "pokemons"."name" = $1 LIMIT $2[0m  [["name", "pidgey"], ["LIMIT", 1]]
+  ↳ app/controllers/pokemons_controller.rb:23:in `block in create_from_api'
+  [1m[36mPokemon Load (0.6ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons" WHERE "pokemons"."name" = $1 LIMIT $2[0m  [["name", "pidgeotto"], ["LIMIT", 1]]
+  ↳ app/controllers/pokemons_controller.rb:23:in `block in create_from_api'
+  [1m[36mPokemon Load (0.7ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons" WHERE "pokemons"."name" = $1 LIMIT $2[0m  [["name", "pidgeot"], ["LIMIT", 1]]
+  ↳ app/controllers/pokemons_controller.rb:23:in `block in create_from_api'
+  [1m[36mPokemon Load (0.6ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons" WHERE "pokemons"."name" = $1 LIMIT $2[0m  [["name", "rattata"], ["LIMIT", 1]]
+  ↳ app/controllers/pokemons_controller.rb:23:in `block in create_from_api'
+  [1m[36mPokemon Load (0.6ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons" WHERE "pokemons"."name" = $1 LIMIT $2[0m  [["name", "raticate"], ["LIMIT", 1]]
+  ↳ app/controllers/pokemons_controller.rb:23:in `block in create_from_api'
+  Rendering layout layouts/application.html.erb
+  Rendering pokemons/index.html.erb within layouts/application
+  [1m[36mPokemon Load (0.9ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons" LIMIT $1 OFFSET $2[0m  [["LIMIT", 6], ["OFFSET", 18]]
+  ↳ app/views/pokemons/index.html.erb:9:in `each_with_index'
+  Rendered pokemons/index.html.erb within layouts/application (Duration: 3.8ms | Allocations: 2709)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 12.3ms | Allocations: 9476)
+Completed 200 OK in 83ms (Views: 11.8ms | ActiveRecord: 11.7ms | Allocations: 25695)
+
+
+Started GET "/pokemons/1845" for 127.0.0.1 at 2023-01-27 20:17:56 -0300
+Processing by PokemonsController#show as HTML
+  Parameters: {"id"=>"1845"}
+  [1m[36mPokemon Load (0.7ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons" WHERE "pokemons"."id" = $1 LIMIT $2[0m  [["id", 1845], ["LIMIT", 1]]
+  ↳ app/controllers/pokemons_controller.rb:14:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering pokemons/show.html.erb within layouts/application
+  Rendered pokemons/show.html.erb within layouts/application (Duration: 0.3ms | Allocations: 125)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 29.1ms | Allocations: 7578)
+Completed 200 OK in 34ms (Views: 30.1ms | ActiveRecord: 0.7ms | Allocations: 8797)
+
+
+Started GET "/?page=4" for 127.0.0.1 at 2023-01-27 20:17:59 -0300
+Processing by PokemonsController#index as HTML
+  Parameters: {"page"=>"4"}
+  [1m[36mPokemon Load (0.6ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons" WHERE "pokemons"."name" = $1 LIMIT $2[0m  [["name", "bulbasaur"], ["LIMIT", 1]]
+  ↳ app/controllers/pokemons_controller.rb:23:in `block in create_from_api'
+  [1m[36mPokemon Load (0.8ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons" WHERE "pokemons"."name" = $1 LIMIT $2[0m  [["name", "ivysaur"], ["LIMIT", 1]]
+  ↳ app/controllers/pokemons_controller.rb:23:in `block in create_from_api'
+  [1m[36mPokemon Load (0.5ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons" WHERE "pokemons"."name" = $1 LIMIT $2[0m  [["name", "venusaur"], ["LIMIT", 1]]
+  ↳ app/controllers/pokemons_controller.rb:23:in `block in create_from_api'
+  [1m[36mPokemon Load (0.5ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons" WHERE "pokemons"."name" = $1 LIMIT $2[0m  [["name", "charmander"], ["LIMIT", 1]]
+  ↳ app/controllers/pokemons_controller.rb:23:in `block in create_from_api'
+  [1m[36mPokemon Load (0.8ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons" WHERE "pokemons"."name" = $1 LIMIT $2[0m  [["name", "charmeleon"], ["LIMIT", 1]]
+  ↳ app/controllers/pokemons_controller.rb:23:in `block in create_from_api'
+  [1m[36mPokemon Load (0.7ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons" WHERE "pokemons"."name" = $1 LIMIT $2[0m  [["name", "charizard"], ["LIMIT", 1]]
+  ↳ app/controllers/pokemons_controller.rb:23:in `block in create_from_api'
+  [1m[36mPokemon Load (0.6ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons" WHERE "pokemons"."name" = $1 LIMIT $2[0m  [["name", "squirtle"], ["LIMIT", 1]]
+  ↳ app/controllers/pokemons_controller.rb:23:in `block in create_from_api'
+  [1m[36mPokemon Load (0.6ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons" WHERE "pokemons"."name" = $1 LIMIT $2[0m  [["name", "wartortle"], ["LIMIT", 1]]
+  ↳ app/controllers/pokemons_controller.rb:23:in `block in create_from_api'
+  [1m[36mPokemon Load (0.6ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons" WHERE "pokemons"."name" = $1 LIMIT $2[0m  [["name", "blastoise"], ["LIMIT", 1]]
+  ↳ app/controllers/pokemons_controller.rb:23:in `block in create_from_api'
+  [1m[36mPokemon Load (0.7ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons" WHERE "pokemons"."name" = $1 LIMIT $2[0m  [["name", "caterpie"], ["LIMIT", 1]]
+  ↳ app/controllers/pokemons_controller.rb:23:in `block in create_from_api'
+  [1m[36mPokemon Load (0.6ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons" WHERE "pokemons"."name" = $1 LIMIT $2[0m  [["name", "metapod"], ["LIMIT", 1]]
+  ↳ app/controllers/pokemons_controller.rb:23:in `block in create_from_api'
+  [1m[36mPokemon Load (0.6ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons" WHERE "pokemons"."name" = $1 LIMIT $2[0m  [["name", "butterfree"], ["LIMIT", 1]]
+  ↳ app/controllers/pokemons_controller.rb:23:in `block in create_from_api'
+  [1m[36mPokemon Load (0.6ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons" WHERE "pokemons"."name" = $1 LIMIT $2[0m  [["name", "weedle"], ["LIMIT", 1]]
+  ↳ app/controllers/pokemons_controller.rb:23:in `block in create_from_api'
+  [1m[36mPokemon Load (0.7ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons" WHERE "pokemons"."name" = $1 LIMIT $2[0m  [["name", "kakuna"], ["LIMIT", 1]]
+  ↳ app/controllers/pokemons_controller.rb:23:in `block in create_from_api'
+  [1m[36mPokemon Load (0.8ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons" WHERE "pokemons"."name" = $1 LIMIT $2[0m  [["name", "beedrill"], ["LIMIT", 1]]
+  ↳ app/controllers/pokemons_controller.rb:23:in `block in create_from_api'
+  [1m[36mPokemon Load (0.5ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons" WHERE "pokemons"."name" = $1 LIMIT $2[0m  [["name", "pidgey"], ["LIMIT", 1]]
+  ↳ app/controllers/pokemons_controller.rb:23:in `block in create_from_api'
+  [1m[36mPokemon Load (0.5ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons" WHERE "pokemons"."name" = $1 LIMIT $2[0m  [["name", "pidgeotto"], ["LIMIT", 1]]
+  ↳ app/controllers/pokemons_controller.rb:23:in `block in create_from_api'
+  [1m[36mPokemon Load (0.5ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons" WHERE "pokemons"."name" = $1 LIMIT $2[0m  [["name", "pidgeot"], ["LIMIT", 1]]
+  ↳ app/controllers/pokemons_controller.rb:23:in `block in create_from_api'
+  [1m[36mPokemon Load (0.6ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons" WHERE "pokemons"."name" = $1 LIMIT $2[0m  [["name", "rattata"], ["LIMIT", 1]]
+  ↳ app/controllers/pokemons_controller.rb:23:in `block in create_from_api'
+  [1m[36mPokemon Load (0.6ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons" WHERE "pokemons"."name" = $1 LIMIT $2[0m  [["name", "raticate"], ["LIMIT", 1]]
+  ↳ app/controllers/pokemons_controller.rb:23:in `block in create_from_api'
+  Rendering layout layouts/application.html.erb
+  Rendering pokemons/index.html.erb within layouts/application
+  [1m[36mPokemon Load (0.6ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons" LIMIT $1 OFFSET $2[0m  [["LIMIT", 6], ["OFFSET", 18]]
+  ↳ app/views/pokemons/index.html.erb:9:in `each_with_index'
+  Rendered pokemons/index.html.erb within layouts/application (Duration: 3.3ms | Allocations: 2709)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 12.1ms | Allocations: 9575)
+Completed 200 OK in 96ms (Views: 11.8ms | ActiveRecord: 13.4ms | Allocations: 25809)
+
+

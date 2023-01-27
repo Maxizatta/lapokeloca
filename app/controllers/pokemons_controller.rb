@@ -12,6 +12,7 @@ class PokemonsController < ApplicationController
 
   def show
     @pokemon = Pokemon.find(params[:id])
+    @abilities = @pokemon.abilities
     session[:page_number] ||= 1
   end
 
@@ -24,7 +25,13 @@ class PokemonsController < ApplicationController
         data = JSON.parse(response.body)
         image = data["sprites"]["back_default"]
         weight = data["weight"]
-        Pokemon.create(name: pokemon["name"], url: pokemon["url"], imagen: image, weight: weight)
+        current_pokemon = Pokemon.create(name: pokemon["name"], url: pokemon["url"], imagen: image, weight: weight)
+        abilities = data["abilities"]
+        abilities.each do |ability|
+          name = ability["ability"]["name"]
+          current_pokemon.abilities << name
+        end
+        current_pokemon.save
       end
     end
   end
