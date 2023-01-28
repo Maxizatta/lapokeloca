@@ -60,3 +60,7 @@ gem 'rest-client'
 gem 'bootstrap'
 
 gem 'kaminari'
+
+gem 'rspec-rails', '~> 4.0.0'
+
+gem 'rails-controller-testing'
